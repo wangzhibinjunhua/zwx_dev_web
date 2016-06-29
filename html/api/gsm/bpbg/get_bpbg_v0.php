@@ -6,12 +6,12 @@ $data="";
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-	$datatype = isset($_POST['devicetype']) ? $_POST['devicetype'] : '0';
+	$devicetype = isset($_POST['devicetype']) ? $_POST['devicetype'] : '0';
 	$data = isset($_POST['data']) ? $_POST['data'] : 'hello';
 
 }else if($_SERVER['REQUEST_METHOD']== "GET"){
 
-	$datatype = isset($_GET['devicetype']) ? $_GET['devicetype'] : '0';
+	$devicetype = isset($_GET['devicetype']) ? $_GET['devicetype'] : '0';
 	$data = isset($_GET['data']) ? $_GET['data'] : 'hello';
 
 }else{
