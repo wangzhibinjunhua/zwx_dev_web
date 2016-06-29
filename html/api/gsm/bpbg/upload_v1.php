@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Length: 31');
 $datatype="";
 $data="";
 
@@ -52,11 +52,11 @@ $ret=parse_data($showtime,$datatype,$data);
 $return_msg_new_1=strtoupper($return_msg_new);
 //echo strtoupper($return_msg_new);
 echo $return_msg_new_1;
-
+//die();
 
 function parse_data($showtime,$datatype,$data){
 //file_put_contents("log.txt",$showtime." datatype=".$datatype." data=".$data.PHP_EOL,FILE_APPEND);
-	file_put_contents("log.txt",$showtime.PHP_EOL,FILE_APPEND);
+	file_put_contents("log.txt",$showtime.$data.PHP_EOL,FILE_APPEND);
 	if(strlen($data)==85){
 		$device_type=hexdec(substr($data,9,2));
 		$sn         =hexdec(substr($data,11,9));
@@ -78,7 +78,7 @@ function parse_data($showtime,$datatype,$data){
     		mysql_close();
 
 		}else if($device_type == '02'){//血糖仪
-			$bg_value=hexdec(substr($data,26,3));
+			$bg_value=(substr($data,26,3));
 			$sql=mysql_query(" insert into gsm_bg (sn,imsi,bg,datetime) values ($sn,$imsi,$bg_value,'$showtime')");
 			mysql_close();
 		}
