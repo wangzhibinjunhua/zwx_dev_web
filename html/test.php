@@ -1,6 +1,6 @@
 
 <?php
-echo '123'.'/'.'222';
+echo '+abcdefg';
 die();
 echo 16^6^23^13^37;
 echo '</br>';
