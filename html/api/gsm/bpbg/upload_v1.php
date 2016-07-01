@@ -58,28 +58,28 @@ function parse_data($showtime,$datatype,$data){
 //file_put_contents("log.txt",$showtime." datatype=".$datatype." data=".$data.PHP_EOL,FILE_APPEND);
 	file_put_contents("log.txt",$showtime.$data.PHP_EOL,FILE_APPEND);
 	if(strlen($data)==85){
-		$device_type=hexdec(substr($data,9,2));
-		$sn         =hexdec(substr($data,11,9));
-		$imsi       =hexdec(substr($data,44,15));
+		$device_type=(substr($data,9,2));
+		$sn         =(substr($data,11,9));
+		$imsi       =(substr($data,44,15));
 
 		mysql_connect("localhost:3306","root","huayingtekmysql");
  		mysql_query("SET NAMES utf8");
  		mysql_select_db("health");
 
 		if($device_type == '01'){//血压计
-    		$user       =hexdec(substr($data,4,1));
+    		$user       =(substr($data,4,1));
     		$sys        =(substr($data,20,3));//高压
     		$dia        =(substr($data,23,3));//低血压
     		$pul        =(substr($data,26,3));//心率
 
 
     		$bp=$sys.'*'.$dia;
-    		$sql=mysql_query(" insert into gsm_bp (sn,imsi,user,bp,bpm,datetime) values ($sn,$imsi,$user,'$bp',$pul,'$showtime')");
+    		$sql=mysql_query(" insert into gsm_bp (sn,imsi,user,bp,bpm,datetime) values ('$sn','$imsi','$user','$bp','$pul','$showtime')");
     		mysql_close();
 
 		}else if($device_type == '02'){//血糖仪
 			$bg_value=(substr($data,26,3));
-			$sql=mysql_query(" insert into gsm_bg (sn,imsi,bg,datetime) values ($sn,$imsi,$bg_value,'$showtime')");
+			$sql=mysql_query(" insert into gsm_bg (sn,imsi,bg,datetime) values ('$sn','$imsi','$bg_value','$showtime')");
 			mysql_close();
 		}
 

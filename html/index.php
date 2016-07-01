@@ -3,9 +3,11 @@ $info=$_SERVER['HTTP_HOST'];
 switch($info){
 	case "huayinghealth.com":
 	case "www.huayinghealth.com":
+		header("location:http://huayinghealth.com/health");
+		break;
 	case "www.huayinghealth.cn":
 	case "huayinghealth.cn":
-		header("location:http://huayinghealth.com/health");
+		header("location:http://huayinghealth.cn/health");
 		break;
 	default:
 		//header("location:index.php");

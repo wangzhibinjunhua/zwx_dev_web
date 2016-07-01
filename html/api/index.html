@@ -1,116 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>huayinghealthapiindex.md</title>
+<style type="text/css">
 
-
-
-<html>
-
-    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></>
-
-    <style type="text/css">
-
-        BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; }
-        #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; }
-        A:link { color: #336699; font-weight: bold; text-decoration: underline; }
-        A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; }
-        A:active { color: #336699; font-weight: bold; text-decoration: underline; }
-        A:hover { color: cc3300; font-weight: bold; text-decoration: underline; }
-        P { color: #000000; margin-top: 0px; margin-bottom: 12px; font-family: Verdana; }
-        pre { background-color: #e5e5cc; padding: 5px; font-family: Courier New; font-size: x-small; margin-top: -5px; border: 1px #f0f0e0 solid; }
-        td { color: #000000; font-family: Verdana; font-size: .7em; }
-        h2 { font-size: 1.5em; font-weight: bold; margin-top: 25px; margin-bottom: 10px; border-top: 1px solid #003366; margin-left: -15px; color: #003366; }
-        h3 { font-size: 1.1em; color: #000000; margin-left: -15px; margin-top: 10px; margin-bottom: 10px; }
-        ul { margin-top: 10px; margin-left: 20px; }
-        ol { margin-top: 10px; margin-left: 20px; }
-        li { margin-top: 10px; color: #000000; }
-        font.value { color: darkblue; font: bold; }
-        font.key { color: darkgreen; font: bold; }
-        font.error { color: darkred; font: bold; }
-        .heading1 { color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal; background-color: #003366; margin-top: 0px; margin-bottom: 0px; margin-left: -30px; padding-top: 10px; padding-bottom: 3px; padding-left: 15px; width: 105%; }
-        .button { background-color: #dcdcdc; font-family: Verdana; font-size: 1em; border-top: #cccccc 1px solid; border-bottom: #666666 1px solid; border-left: #cccccc 1px solid; border-right: #666666 1px solid; }
-        .frmheader { color: #000000; background: #dcdcdc; font-family: Verdana; font-size: .7em; font-weight: normal; border-bottom: 1px solid #dcdcdc; padding-top: 2px; padding-bottom: 2px; }
-        .frmtext { font-family: Verdana; font-size: .7em; margin-top: 8px; margin-bottom: 0px; margin-left: 32px; }
-        .frmInput { font-family: Verdana; font-size: 1em; }
-        .intro { margin-left: -15px; }
-
+        .huayingapi { color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal; background-color: #003366; margin-top: 0px; margin-bottom: 0px; margin-left: -10px; padding-top: 10px; padding-bottom: 3px; padding-left: 15px; width: 105%; }
     </style>
 
-    <title>
-    Huayinghealth API
-</title></head>
+</head>
+<p class="huayingapi">Huayinghealth API</p><br>
+<body id="preview">
+<h1><a id="1httpapihuayinghealthcomdocwatchserverhtml_1"></a>1.<a href="http://api.huayinghealth.com/doc/watchserver.html">手表通信协议</a></h1>
+<h1><a id="2GSM_5"></a>2.GSM版智能设备</h1>
+<ul>
+<li><a href="http://api.huayinghealth.com/doc/gsm/gsm_bpbg.html">GSM血压计&amp;血糖仪</a></li>
+</ul>
 
-  <body>
-
-    <div id="content">
-
-      <p class="heading1">Huayinghealth API</p><br>
-
-        <ul>
-              <li>
-                <a href="">get_bpbg_v1.php</a>
-
-                <span>
-                  <br>
-                <h3>获取血压计和血糖仪数据</h3>
-                <ul>
-                <li>参数说明
-                    <ul>
-                        <li>devicetype:设备型号  :必须</li>
-                            <ul>
-                                <li>1:血压计</li>
-                                <li>2:血糖仪</li>
-                            </ul>
-                        <li>sn:设备序列号  :必须</li>
-                        <li>user:血压计用户编号  :可选</li>
-                        <ul>
-                                <li>0:用户0</li>
-                                <li>1:用户1</li>
-                                <li>空缺:所有用户</li>
-                        </ul>
-                        <li>time:时间       :可选   :查询此时间之后的数据   :格式 Y-m-d H:i:s</li>
-                        <li>count:数据条数  :可选   :查询最新count数量的数据,默认查询最新一条</li>
-                    </ul>
-                </li>
-                <li>返回值
-                    <ul>
-                        <li>JSON数据格式</li>
-                    </ul>
-                </li>
-                <li>返回值实例
-                    <ul>
-                    <li>例子:<a href="http://api.huayinghealth.com/gsm/bpbg/get_bpbg_v1.php?devicetype=1&sn=42949834773">http://api.huayinghealth.com/gsm/bpbg/get_bpbg_v1.php?devicetype=1&sn=42949834773</a></li>
-                        <ul>
-                        <li>返回: {"code":1000,"message":[{"id":"21","sn":"42949834773","imsi":"3152546943448239","user":"1","bp":"132*092","bpm":"78","datetime":"2016-06-27 19:29:01"}]}</li>
-                            <ul>
-                                <li>bp:血压,高压*低压 格式 </li>
-                                <li>bpm:心率</li>
-
-                            </ul>
-                        </ul>
-                    <li>例子:<a href="http://api.huayinghealth.com/gsm/bpbg/get_bpbg_v1.php?devicetype=2&sn=352321538">http://api.huayinghealth.com/gsm/bpbg/get_bpbg_v1.php?devicetype=2&sn=352321538</a> </li>
-                        <ul>
-                            <li>返回: {"code":1000,"message":[{"id":"43","sn":"352321538","imsi":"3152563827009178","bg":"105","datetime":"2016-06-28 15:26:44"}]}</li>
-                                <ul>
-                                    <li>bg: 血糖 mg/dL </li>
-                                </ul>
-                        </ul>
-                    </ul>
-                </li>
-                <li>错误代码
-                    <ul>
-                        <li>1000:获取数据成功.</li>
-                        <li>1008:无符合条件的查询数据.</li>
-                        <li>1005:user(用户)无效.</li>
-                        <li>1006:设备类型不支持.</li>
-                        <li>1007:sn为空.</li>
-
-                    </ul>
-                </li>
-                </ul>
-
-                </span>
-              </li>
-              <p>
-
-
-
-  </body>
-</html>
+</body></html>
