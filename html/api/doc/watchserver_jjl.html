@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>华英-加家乐儿童手表通信协议</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<h1 id="-"><strong>儿童手表通信协议</strong></h1>
+<h1 id="-">一.说明</h1>
+<ul>
+<li>该协议中所有数据都按照“LENGTH厂商<em>设备ID </em>内容”格式,“厂商”由ASCII码组成，以区分不同厂商的手表，由服务器分配，“设备ID”为15个数字，需要在服务器上注册的设备ID才可以正常工作， “内容长度LENGTH”固定为四个字节的HEX码,高位在前低位在后,例如FFFF表示长度为65535.“内容”根据指令的不同格式不一样。 </li></ul>
+<h1 id="-">二.终端发送指令</h1>
+<h2 id="1-">1.链路保持</h2>
+<ul>
+<li>终端发送<br>LENGTHCS*YYYYYYYYYY*LK<br>实例:<code>0015CS*123456789012345*LK</code>        </li><li>平台回复<br>LENGTHCS*YYYYYYYYYY*LK<br>实例:<code>0015CS*123456789012345*LK</code>        </li><li>说明:链路保持数据5分钟发一次,若终端未收到回复数据,则5分钟重新连接一次.这个链路保持时间可以根据贵司的实际经验进行修改，目的是保持手表和服务器的连接.</li></ul>
+<h2 id="2-">2.位置数据上报</h2>
+<ul>
+<li>终端发送:<br>LENGTHCS*YYYYYYYYYY*UD,位置数据(查看基础数据上报)<br>实例:<br><code>00E7CS*123456789012345*UD,220414,134652,A,22.571707,N,113.8613968,E,0.39,213.9,100,7,60,90,1000,00010000,4,1,460,02,9360,4082,131,9360,4092,148,9360,4091,143,9360,4153,141,2,TP-LINK1,1c:fa:68:13:a5:b4,-61,TP-LINK2,1c:fa:68:13:a5:b4,-55</code>    </li><li>平台回复:<br>无<br>说明:终端按照设定间隔上报位置和状态信息,不需要平台回复.       </li></ul>
+<h2 id="3-">3.盲点补传数据</h2>
+<ul>
+<li>终端发送:<br>LENGTHCS*YYYYYYYYYY*UD2 位置数据 (同上)       </li><li>平台回复:<br>无<br>说明:补传未登陆平台是产生的上报数据      </li></ul>
+<h2 id="4-">4.获取天气</h2>
+<ul>
+<li>终端发送:<br>LENGTHCS*YYYYYYYYYY*WEATHER, GPS数据,基站个数,MCC国家码,MNC网号,基站数据,WIFI数据(数据格式参考附录一)注:不包含方向,速度等信息<br>实例:<br><code>0039CS*123456789012345*WEATHER,V,40.090271,116.3689728,2,460,0,4417,22004,131,4417,54526,114</code>       </li><li>平台回复:<br>LENGTHCS*YYYYYYYYYY*WEATHER,1 代表平台收到终端获取天气请求<br>平台处理完天气数据下发给终端<br>实例:<code>001FCS*123456789012345*WEATHER,30,1</code><br>(暂无数据)实例:<code>001FCS*123456789012345*WEATHER,2</code><br>终端回复<br>LENGTHCS*YYYYYYYYYY*WEATHER,1 代表终端收到平台获取天气数据<br>说明:终端向平台请求天气数据,平台回复当前天气数据<br>0— 晴<br>1— 多云<br>2— 阴<br>3— 雨(包含雨夹雪类天气)<br>4— 暴雨<br>5—雪      </li></ul>
+<h1 id="-">三.平台发送指令</h1>
+<h2 id="1-">1.数据上传间隔设置</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*UPLOAD,时间间隔<br>实例:<code>001CCS*123456789012345*UPLOAD,10</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*UPLOAD<br>实例:<code>0019CS*123456789012345*UPLOAD</code><br>说明:设置终端定时上报的时间间隔.</li></ul>
+<h2 id="2-">2.中心号码设置</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*CENTER,中心号码<br>实例:<code>0025CS*123456789012345\*CENTER,00000000000</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*CENTER<br>实例:<code>0019CS*123456789012345*CENTER</code><br>说明:设置中心号码,通过该手机号码可发送短信指令.</li></ul>
+<h2 id="3-">3.辅助中心号码设置</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*SLAVE,辅助中心号码<br>实例:<code>0024CS*123456789012345*SLAVE,00000000000</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*SLAVE<br>实例:<code>0018CS*123456789012345*SLAVE</code><br>说明:设置辅助中心号码,通过该手机号码可发送短信指令.  </li></ul>
+<h2 id="4-">4.控制密码设置</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*PW,密码<br>实例:<code>001CCS*123456789012345*PW,111111</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*PW<br>实例:<code>0015CS*123456789012345*PW</code><br>说明:设置终端密码,非中心号码发送短信指令需添加密码.</li></ul>
+<h2 id="5-">5.拨打电话</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*CALL,电话号码<br>实例:<code>0023CS*123456789012345*CALL,00000000000</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*CALL<br>实例:<code>0017CS*123456789012345*CALL</code><br>说明:通过该指令拨打相应手机号.</li></ul>
+<h2 id="6-">6.发送短信</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*SMS,短信号码,短信内容<br>实例:<code>0029CS*123456789012345*SMS,00000000000,123ABC大家好</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*SMS<br>实例:<code>0016CS*123456789012345*SMS</code><br>说明:通过该指令向相应手机号转发短信,短信内容采用GB232编码发送. </li></ul>
+<h2 id="7-">7.监听</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*MONITOR<br>实例:<code>001ACS*123456789012345*MONITOR</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*MONITOR<br>实例: <code>001ACS*123456789012345*MONITOR</code><br>说明:终端自动回拨中心号码</li></ul>
+<h2 id="8-sos-">8.SOS号码设置</h2>
+<ul>
+<li>(1) 第1个SOS号码设置<br>平台发送:<br>LENGTHCS*YYYYYYYYYY*SOS1,电话号码<br>实例:<code>0023CS*123456789012345*SOS1,00000000000</code><br>终端回复:<br>LENGTHCS*YYYYYYYYYY*SOS1<br>实例:<code>0017CS*123456789012345*SOS1</code> </li><li>(2) 第2个SOS号码设置<br>平台发送:<br>LENGTHCS*YYYYYYYYYY*SOS2,电话号码<br>实例:<code>0023CS*123456789012345*SOS2,00000000000</code><br>终端回复:<br>LENGTHCS*YYYYYYYYYY*SOS2<br>实例: <code>0017CS*123456789012345*SOS2</code></li><li>(3) 第3个SOS号码设置<br>平台发送:<br>LENGTHCS*YYYYYYYYYY*SOS3,电话号码<br>实例: <code>0023CS*123456789012345*SOS3,00000000000</code><br>终端回复:<br>LENGTHCS*YYYYYYYYYY*SOS3<br>实例: <code>0017CS*123456789012345*SOS3</code></li><li>(4) 3个SOS号码同时设置<br>平台发送:<br>LENGTHCS*YYYYYYYYYY*SOS,电话号码,电话号码,电话号码<br>实例:<code>003ACS*123456789012345*SOS,00000000000,00000000000,00000000000</code><br>终端回复:<br>LENGTHCS*YYYYYYYYYY*SOS<br>实例:<code>0016CS*123456789012345*SOS</code><br>说明:设置SOS号码,发生警情时向该号码发送短信或拨打电话.</li></ul>
+<h2 id="9-ip-">9.IP端口设置</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*IP,IP或域名,端口<br>实例:<code>0027CS*123456789012345*IP,113.81.229.9,5900</code></li><li>终端回复:<br>该指令终端无回复,直接断开当前连接,连接新服务器.<br>说明:设置连接平台的IP和端口.</li></ul>
+<h2 id="10-">10.恢复出厂设置</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*FACTORY<br>实例:<code>001ACS*123456789012345*FACTORY</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*FACTORY<br>实例: <code>001ACS*123456789012345*FACTORY</code><br>说明:终端恢复出厂设置.</li></ul>
+<h2 id="11-">11.设置语言和时区</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*LZ,语言,时区<br>实例:<code>0019CS*123456789012345*LZ,1,8</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*LZ<br>实例:<code>0015CS*123456789012345*LZ</code><br>说明:设置终端语言和时区.</li></ul>
+<h2 id="12-sos-">12.SOS短信报警开关</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*SOSSMS,0或1<br>实例:<code>001BCS*123456789012345*SOSSMS,0</code>  </li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*SOSSMS<br>实例:<code>0019CS*123456789012345*SOSSMS</code><br>说明: 设置产生SOS报警后是否向SOS号码发送短信(0:关闭,1:打开).</li></ul>
+<h2 id="13-">13.低电短信报警开关</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*LOWBAT,0或1<br>实例:<code>001BCS*123456789012345*LOWBAT,1</code> </li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*LOWBAT<br>实例:<code>0019CS*123456789012345*LOWBAT</code><br>说明: 设置产生低点报警后是否向中心号码发送短信(0:关闭,1:打开).  </li></ul>
+<h2 id="14-apn-">14.APN设置</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*APN,APN名字,用户名,密码,用户数据<br>实例:<code>0024CS*123456789012345*APN,cmnet,,,46000</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*APN<br>实例:<code>0014CS*123456789012345*APN</code><br>说明: 设置终端APN参数</li></ul>
+<h2 id="15-">15.短信权限控制</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*ANY,0或者1<br>实例:<code>0018CS*123456789012345*ANY,0</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*ANY<br>实例:<code>0016CS*123456789012345*ANY</code><br>说明: 设置终端短信控制权限. </li></ul>
+<h2 id="16-">16.参数查询</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*TS<br>实例:<code>0015CS*123456789012345*TS</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*TS,软件版本号;设备ID; IP;IMEI;端口;中心号码;辅助中心号码;SOS1号码;SOS2号码;SOS3号码;上报间隔; 电池电量; 语言;时区;卫星个数;GSM信号强度;LED开关;密码<br>说明: 查询终端参数.<br>实例: <pre><code>00E7CS*123456789012345*TS,ver:G29_BASE_V1.00_2014.04.24_09.47.23;
+&quot;ID:123456789012345;
+IMEI:43353453543;
+url:113.81.229.9;
+port:5900;
+center:;
+slave:;
+sos1:;
+sos2:;
+sos3:;
+upload:30S;
+workmode:1;
+batlevel:3;
+language:1;
+zone:8.00;
+GPS:NO(0);
+GPRS:OK(89);
+LED:OFF;
+pw:123456&quot;
+</code></pre></li></ul>
+<h2 id="17-">17.版本查询</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*VERNO<br>实例:<code>0018CS*123456789012345*VERNO</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*VERNO,版本号<br>实例:<code>0027CS*123456789012345*VERNO,G29_BASE_V1.00_2014.04.23_17.46.49</code><br>说明:查询终端软件版本.</li></ul>
+<h2 id="18-">18.重启</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*RESET<br>实例:<code>0018CS*123456789012345*RESET</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*RESET<br>实例: <code>0018CS*123456789012345*RESET</code><br>说明:终端重启.</li></ul>
+<h2 id="19-">19.定位指令</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*CR<br>实例:<code>0015CS*123456789012345*CR</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*CR<br>实例: <code>0015CS*123456789012345*CR</code><br>说明:立即唤醒终端GPS模块,连续一段时间一直处于定位状态. </li></ul>
+<h2 id="20-">20.关机指令</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*POWEROFF<br>实例:<code>001BCS*123456789012345*POWEROFF</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*POWEROFF<br>实例: <code>001BCS*123456789012345*POWEROFF</code><br>说明:关机功能. </li></ul>
+<h2 id="21-">21.取下手环报警开关</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*REMOVE,0或者1<br>实例:<code>001BCS*123456789012345*REMOVE,1</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*REMOVE<br>实例: <code>0019CS*123456789012345*REMOVE</code><br>说明:拆除报警开关功能.</li></ul>
+<h2 id="22-">22.找手表指令</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*FIND<br>实例:<code>0017CS*123456789012345*FIND</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*FIND<br>实例: <code>0017CS*123456789012345*FIND</code><br>说明: 发送该指令手边响铃1分钟. </li></ul>
+<h2 id="23-">23.闹钟设置指令</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*REMIND,闹钟1,闹钟2,闹钟3<br>实例:<code>003ECS*123456789012345*REMIND,08:10-1-1,08:10-1-2, 08:50-1-3-0111110</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*REMIND<br>实例:<code>0019CS*123456789012345*REMIND</code><br>说明:<br>08:50为时间, 1代表开启, 3代表第三种类型 0111110代表周一到周日<br>第一种类型:只闹一次.<br>第二种类型:每天闹<br>第三种类型:自定义</li></ul>
+<h2 id="24-">24.电话本设置指令</h2>
+<ul>
+<li>电话簿里的号码默认是白名单，电话簿以外号码无法给手表拨打电话、发送短信<br>平台发送(前面5个):<br>LENGTHCS*YYYYYYYYYY*PHB,姓名1,号码1,姓名2,号码2,姓名3,号码3,姓名4,号码4,姓名5,号码5<br>实例:<code>002ECS*123456789012345*PHB,597D003100320033,313131</code><br>终端回复:<br>LENGTHCS*YYYYYYYYYY*PHB<br>实例:<code>0016CS*123456789012345*PHB</code><br>平台发送(后面5个):<br>LENGTHCS*YYYYYYYYYY*PHB2,姓名6,号码6,姓名7,号码7,姓名8,号码8,姓名9,号码9,姓名10,号码10<br>实例:<code>002ECS*123456789012345*PHB2,597D003100320033,313131</code><br>终端回复:<br>LENGTHCS*YYYYYYYYYY*PHB2<br>实例:<code>0017CS*123456789012345*PHB2</code><br>说明:该指令设置终端电话本.</li></ul>
+<h2 id="25-">25.语音功能</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*TK,AMR格式音频数据<br>终端回复:<br>LENGTHCS*YYYYYYYYYY*TK,接收结果<br>接收结果:1—成功         0-失败 </li><li>终端发送:<br>LENGTHCS*YYYYYYYYYY*TK,AMR格式音频数据<br>平台回复:<br>LENGTHCS*YYYYYYYYYY*TK,接收结果<br>接收结果:1—成功         0-失败 </li></ul>
+<h2 id="26-">26.拍照</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*PHOTO<br>实例:<code>0018CS*123456789012345*PHOTO</code></li><li>终端发送:<br>LENGTHCS*YYYYYYYYYY*PHOTO,图片数据<br>实例:<br><code>0039CS*123456789012345*PHOTO,</code>  </li><li>平台回复:<br>LENGTHCS*YYYYYYYYYY*PHOTO,接收结果<br>实例:<code>001ACS*123456789012345*PHOTO,1</code><br>接收结果:1—成功         0--失败</li></ul>
+<h2 id="27-">27.免打扰时间段设置</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*SILENCETIME,时间段,时间段,时间段,时间段<br>实例:       <code>0039CS*123456789012345*SILENCETIME,21:10-07:30,09:00-12:00,14:00-16:00</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*SILENCETIME<br>实例:<code>001ACS*123456789012345*SILENCETIME</code><br>说明: 设置免打扰时间段范围</li></ul>
+<h2 id="28-">28.音量调节</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*VOLUME,音量等级(0/1/2/3/4)<br>实例:<code>0039CS*123456789012345*VOLUME,3</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*VOLUME<br>实例:<code>001ACS*123456789012345*VOLUME</code><br>说明: 设置手表音量等级</li></ul>
+<h2 id="29-">29.屏幕亮度调节</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*BRIGHTNESS,亮度等级(0/1/2/3/4)<br>实例:<code>0039CS*123456789012345*BRIGHTNESS,3</code> </li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*BRIGHTNESS<br>实例:<code>001ACS*123456789012345*BRIGHTNESS</code><br>说明: 设置手表屏幕亮度等级 </li></ul>
+<h2 id="30-">30.音频播放</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*MEDIA,音频文件URL<br>实例:<code>0039CS*123456789012345*MEDIA,url</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*MEDIA,下载结果<br>实例:<code>001ACS*123456789012345*MEDIA,1</code><br>说明: 平台发送音频文件url,终端下载此音频文件并播放<br>下载结果:1—成功        0— 失败   </li></ul>
+<h2 id="31-">31.查询话费流量</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*CXYELL<br>实例: <code>0039CS*123456789012345*CXYELL</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*CXYELL,短信内容<br>实例:<code>001ACS*123456789012345*CXYELL,运营商回复的短信内容</code></li></ul>
+<h2 id="32-">32.计步功能开关</h2>
+<ul>
+<li>平台发送:<br>LENGTHCS*YYYYYYYYYY*PEDO,开关<br>实例:<code>0039CS*123456789012345*PEDO,1</code></li><li><p>终端回复:<br>LENGTHCS*YYYYYYYYYY*PEDO<br>实例:<code>001ACS*123456789012345*PEDO</code>      </p>
+</li><li><p>说明:1—打开 0— 关闭</p>
+</li></ul>
+<h2 id="33-">33.查看手表是否在线</h2>
+<ul>
+<li>平台发送：<br>LENGTHCS*YYYYYYYYYY*PING<br>实例:<code>0017CS*123456789012345*PING</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*PING<br>实例:<code>0017CS*123456789012345*PING</code></li></ul>
+<h2 id="34-">34.发送文本消息</h2>
+<ul>
+<li>平台发送：<br>LENGTHCS*YYYYYYYYYY*MESSAGE,文本消息内容<br>实例:<code>0021CS*123456789012345*MESSAGE,hello</code></li><li>终端回复:<br>LENGTHCS*YYYYYYYYYY*MESSAGE<br>实例:<code>001BCS*123456789012345*MESSAGE</code> </li></ul>
+<h1 id="-">四.附录</h1>
+<h2 id="1-">1.附录一</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>实例(ASII码)</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日期</td>
+<td>120414</td>
+<td>(日月年)2014年4月12日</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>101930</td>
+<td>(时分秒)10点19分30秒</td>
+</tr>
+<tr>
+<td>是否定位</td>
+<td>A</td>
+<td>A:定位 V:未定位</td>
+</tr>
+<tr>
+<td>纬度</td>
+<td>22.564026</td>
+<td>按照DD.DDDDDD格式定义,此纬度值为22.564025</td>
+</tr>
+<tr>
+<td>纬度标识</td>
+<td>N</td>
+<td>N表示北纬,S表示南纬</td>
+</tr>
+<tr>
+<td>经度</td>
+<td>113.242329</td>
+<td>按照DD.DDDDDD格式定义,此经度值为113.242329</td>
+</tr>
+<tr>
+<td>经度标识</td>
+<td>E</td>
+<td>E表示东经,W表示西经</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>5.21</td>
+<td>5.21公里/小时</td>
+</tr>
+<tr>
+<td>方向</td>
+<td>152</td>
+<td>方向在152度</td>
+</tr>
+<tr>
+<td>海拔</td>
+<td>100</td>
+<td>单位为米</td>
+</tr>
+<tr>
+<td>卫星个数</td>
+<td>9</td>
+<td>表明GPS卫星个数</td>
+</tr>
+<tr>
+<td>GSM信号强度</td>
+<td>100</td>
+<td>表明当前GSM信号强度(0-100)</td>
+</tr>
+<tr>
+<td>电量</td>
+<td>90</td>
+<td>当前电量等级百分比</td>
+</tr>
+<tr>
+<td>计步数</td>
+<td>1000</td>
+<td>计步数为1000</td>
+</tr>
+<tr>
+<td>翻滚次数</td>
+<td>50</td>
+<td>翻滚50次</td>
+</tr>
+<tr>
+<td>终端状态</td>
+<td>00000000</td>
+<td>用十六进制字符串表示,含义如下:<br>高16bit表示报警,低16bit表示状态.<br>Bit位(0开始)    含义(1有效)<br>0 : 低电状态<br>1 : 出围栏状态<br>2 : 进围栏状态<br>3 : 手环状态<br>16 : SOS报警<br>17:低电报警<br>18:出围栏报警<br>19:进围栏报警<br>20:手环拆除报警</td>
+</tr>
+<tr>
+<td>基站个数</td>
+<td>4</td>
+<td>上报基站个数,0表示不上报基站信息,最多6个附近基站</td>
+</tr>
+<tr>
+<td>连接基站ta</td>
+<td>1</td>
+<td>GSM时延</td>
+</tr>
+<tr>
+<td>MCC国家码</td>
+<td>460</td>
+<td>460代表中国</td>
+</tr>
+<tr>
+<td>MNC网号</td>
+<td>0</td>
+<td>0代表中国移动,1代表中国联通</td>
+</tr>
+<tr>
+<td>连接基站位置区域码</td>
+<td>10133</td>
+<td>区域码</td>
+</tr>
+<tr>
+<td>连接基站编号</td>
+<td>5173</td>
+<td>基站编号</td>
+</tr>
+<tr>
+<td>连接基站信号强度</td>
+<td>100</td>
+<td>信号强度</td>
+</tr>
+<tr>
+<td>附近基站1位置区域码</td>
+<td>10133</td>
+<td>区域码</td>
+</tr>
+<tr>
+<td>附近基站1编号</td>
+<td>10133</td>
+<td>基站编号</td>
+</tr>
+<tr>
+<td>附近基站1信号强度</td>
+<td>100</td>
+<td>信号强度</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>wifi信息数量</td>
+<td>5</td>
+<td>wifi个数(最多5个),按信号强度排序</td>
+</tr>
+<tr>
+<td>wifi1名字</td>
+<td>rrr</td>
+<td>第一个wifi信息名字</td>
+</tr>
+<tr>
+<td>wifi1 mac地址</td>
+<td><code>1c:fa:68:13:a5:b4</code></td>
+<td>第一个wifi mac地址</td>
+</tr>
+<tr>
+<td>wifi1 信号强度</td>
+<td>-61</td>
+<td>第一个wifi信号强度</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-">2.附录二</h2>
+<table>
+<thead>
+<tr>
+<th>拆分示例</th>
+<th>每个字段说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0039CS*123456789012345*UD,</code></td>
+<td><code>LENGTH厂商*YYYYYYYYYY*UD</code></td>
+</tr>
+<tr>
+<td>220414,</td>
+<td>日期(14年4月22日)</td>
+</tr>
+<tr>
+<td>134652,</td>
+<td>时间(<code>13:46:52</code>)</td>
+</tr>
+<tr>
+<td>A,</td>
+<td>是否定位(A:定位 V:未定位)</td>
+</tr>
+<tr>
+<td>22.571707,</td>
+<td>纬度</td>
+</tr>
+<tr>
+<td>N,</td>
+<td>纬度标识(N:北纬 S:南纬)</td>
+</tr>
+<tr>
+<td>113.8613968,</td>
+<td>经度</td>
+</tr>
+<tr>
+<td>E,</td>
+<td>经度标识(E:东经 W:西经)</td>
+</tr>
+<tr>
+<td>0.39,</td>
+<td>速度(0.39km/h)</td>
+</tr>
+<tr>
+<td>213.9,</td>
+<td>方向(方向在213.9度)</td>
+</tr>
+<tr>
+<td>100,</td>
+<td>海拔(100米)</td>
+</tr>
+<tr>
+<td>7,</td>
+<td>卫星个数(7个)</td>
+</tr>
+<tr>
+<td>60,</td>
+<td>GSM信号强度(60)</td>
+</tr>
+<tr>
+<td>90,</td>
+<td>当前电量(90%)</td>
+</tr>
+<tr>
+<td>1000,</td>
+<td>步数(1000步 只记录打开计步器状态下的步数 未打开计步器 步数为0)</td>
+</tr>
+<tr>
+<td>0001000,</td>
+<td>终端状态(例如00010000是SOS报警)</td>
+</tr>
+<tr>
+<td>2,</td>
+<td>基站个数(2个)</td>
+</tr>
+<tr>
+<td>1,</td>
+<td>GSM时延(1)</td>
+</tr>
+<tr>
+<td>460,</td>
+<td>MCC国家码(460)</td>
+</tr>
+<tr>
+<td>02,</td>
+<td>MNC网号(02代表中国移动)</td>
+</tr>
+<tr>
+<td>9360,</td>
+<td>连接基站位置区域码(9360)</td>
+</tr>
+<tr>
+<td>4082,</td>
+<td>连接基站编号(4082)</td>
+</tr>
+<tr>
+<td>131,</td>
+<td>连接基站信号强度(131)</td>
+</tr>
+<tr>
+<td>9360,</td>
+<td>附近基站1位置区域码(9360)</td>
+</tr>
+<tr>
+<td>4092,</td>
+<td>附近基站1编号(4092)</td>
+</tr>
+<tr>
+<td>148,</td>
+<td>附近基站1信号强度(148)</td>
+</tr>
+<tr>
+<td>2,</td>
+<td>Wifi信息数量(2)</td>
+</tr>
+<tr>
+<td>TP-LIN1,</td>
+<td>Wifi 1名字(TP-LINK1)</td>
+</tr>
+<tr>
+<td><code>1c:fa:68:13:a5:b4,</code></td>
+<td>Wifi1 MAC地址(<code>1c:fa:68:13:a5:b4</code>)</td>
+</tr>
+<tr>
+<td>-61,</td>
+<td>Wifi 1 信号强度(-61)</td>
+</tr>
+<tr>
+<td>TP-LIN2,</td>
+<td>Wifi 2名字(TP-LINK2)</td>
+</tr>
+<tr>
+<td><code>1c:fa:68:13:a5:b3,</code></td>
+<td>Wifi2 MAC地址(<code>1c:fa:68:13:a5:b3</code>)</td>
+</tr>
+<tr>
+<td>-71,</td>
+<td>Wifi 2 信号强度(-71)</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

@@ -1,5 +1,5 @@
 <?php
-
+require_once('/home/work/wzb/project/release/common/db_config.php');
 $devicetype="";
 $data="";
 
@@ -20,9 +20,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 		die();
 }
 
-mysql_connect("localhost:3306","root","huayingtekmysql");
-mysql_query("SET NAMES utf8");
-mysql_select_db("health");
+$db=connect_database();
+if(!$db){
+	echo json_encode(array('code'=>1100,'message'=>'Not support'));
+	die();
+}
+
 //$sql=mysql_query("insert into WatchLocations (userid,longitude,latitude,datetime) values ($watch_imei,'99.:99','99.22',$watch_time)");
 if($devicetype == '1'){
 	$sql=mysql_query("select * from gsm_bg");

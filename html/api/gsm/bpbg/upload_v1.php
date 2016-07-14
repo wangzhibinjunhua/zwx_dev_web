@@ -1,5 +1,6 @@
 <?php
 header('Content-Length: 31');
+require_once('/home/work/wzb/project/release/common/db_config.php');
 $datatype="";
 $data="";
 
@@ -62,9 +63,12 @@ function parse_data($showtime,$datatype,$data){
 		$sn         =(substr($data,11,9));
 		$imsi       =(substr($data,44,15));
 
-		mysql_connect("localhost:3306","root","huayingtekmysql");
- 		mysql_query("SET NAMES utf8");
- 		mysql_select_db("health");
+		$db=connect_database();
+		if(!$db){
+			//echo json_encode(array('code'=>1100,'message'=>'Not support'));
+			//die();
+		}
+
 
 		if($device_type == '01'){//血压计
     		$user       =(substr($data,4,1));

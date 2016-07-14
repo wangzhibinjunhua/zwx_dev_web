@@ -1,5 +1,5 @@
 <?php
-
+require_once('/home/work/wzb/project/release/common/db_config.php');
 $devicetype="";
 $time="";
 $count="";
@@ -44,9 +44,12 @@ if(!($user=='1' || $user=='0' || $user=='2')){
 	die();
 }
 
-mysql_connect("localhost:3306","root","huayingtekmysql");
-mysql_query("SET NAMES utf8");
-mysql_select_db("health");
+$db=connect_database();
+if(!$db){
+	echo json_encode(array('code'=>1100,'message'=>'Not support'));
+	die();
+}
+
 
 if($devicetype == '1'){
 	//$sql=mysql_query("select * from gsm_bp");
