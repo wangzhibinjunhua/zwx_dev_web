@@ -1,6 +1,7 @@
 
 
 <?php
+header("Content-type: text/html; charset=utf-8");
 $msg=$_POST['msg'];
 
 // 建立连接，@see http://php.net/manual/zh/function.stream-socket-client.php
