@@ -44,7 +44,7 @@ if(!($user=='1' || $user=='0' || $user=='2')){
 	die();
 }
 
-$db=connect_database();
+$db=connect_database('health');
 if(!$db){
 	echo json_encode(array('code'=>1100,'message'=>'Not support'));
 	die();

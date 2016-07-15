@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 		die();
 }
 
-$db=connect_database();
+$db=connect_database('health');
 if(!$db){
 	echo json_encode(array('code'=>1100,'message'=>'Not support'));
 	die();

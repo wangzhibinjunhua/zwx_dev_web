@@ -63,7 +63,7 @@ function parse_data($showtime,$datatype,$data){
 		$sn         =(substr($data,11,9));
 		$imsi       =(substr($data,44,15));
 
-		$db=connect_database();
+		$db=connect_database('health');
 		if(!$db){
 			//echo json_encode(array('code'=>1100,'message'=>'Not support'));
 			//die();
