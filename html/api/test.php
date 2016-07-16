@@ -6,7 +6,13 @@
 </head>
 <body>
 <form action="test1.php"  method="post" >
-		请输入要发送的全部内容:<input style="width:1280px;" type="text" name="msg" />
+		请输入要发送的全部内容:<input style="width:1280px;" type="text" name="msg" id="input1" />
+		<br>
+		<br>
+		<br>
+		<input type="button" onclick="javascript:alert((document.getElementById('input1').value.length-4).toString(16));" value="计算长度" />
+		计算的长度是减去前面四位后的长度的16进制显示, 比如0015CS*358688000000158*LK ,计算结果为15
+		<br>
 		<br>
 		<br>
 		<input type="submit" value="发送"  ;/>
