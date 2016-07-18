@@ -9,27 +9,27 @@
 <br>
 <br>
 <form action="push.php"  method="post" >
-		请输入ticker:<input style="width:640px;" type="text" name="ticker"  />
+		请输入ticker:<input style="width:640px;" type="text" name="ticker"  /> 必填
 		<br>
 		<br>
 		<br>
-		请输入title:<input style="width:640px;" type="text" name="title"  />
+		请输入title:<input style="width:640px;" type="text" name="title"  /> 必填
 		<br>
 		<br>
 		<br>
-		请输入content:<input style="width:640px;" type="text" name="content"  />
+		请输入content:<input style="width:640px;" type="text" name="content"  /> 必填
 		<br>
 		<br>
 		<br>
-		请输入url:<input style="width:640px;" type="text" name="url"  /> 格式为http://abcd.com
+		请输入url:<input style="width:640px;" type="text" name="url"  /> 格式为http://abcd.com 可为空
 		<br>
 		<br>
 		<br>
-		请输入interval:<input style="width:640px;" type="text" name="intervals"  />
+		请输入interval:<input style="width:640px;" type="text" name="intervals"  /> 可为空
 		<br>
 		<br>
 		<br>
-		请输入password:<input style="width:640px;" type="text" name="key"  />
+		请输入password:<input style="width:640px;" type="text" name="key"  /> 必填
 		<br>
 		<br>
 		<br>
@@ -62,7 +62,7 @@ while($row=mysql_fetch_array($sql)){
 	echo "<td>".$row[url]."</td>";
 	echo "<td>".$row[intervals]."</td>";
 	echo "<td>".$row[datetime]."</td>";
-	echo "<td>"."<input type='submit' value='delete'/>"."</td>";
+	echo "<td>"."<input type='submit' value='delete'/>"."</td>" ;
 	echo "</tr>";
 }
 ?>
