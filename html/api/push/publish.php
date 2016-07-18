@@ -37,6 +37,36 @@
 	</form>
 <br>
 </body>
+<body>
+<br>
+<br>
+<h1>已发布的推送消息</h1>
+<br>
+<?php
+require_once('/home/work/wzb/project/release/common/db_config.php');
+$db=connect_database('android_push');
+if(!$db){
+	echo json_encode(array('code'=>1100,'message'=>'Not data'));
+	die();
+}
+mysql_query("SET NAMES UTF8");
+$sql=mysql_query("select * from push_novatech");
+echo "<table border=1>";
+echo "<tr><td>ID</td><td>通知</td><td>标题</td><td>内容</td><td>链接</td><td>间隔</td><td>时间</td></tr>";
+while($row=mysql_fetch_array($sql)){
+	echo "<tr>";
+	echo "<td>".$row[id]."</td>";
+	echo "<td>".$row[ticker]."</td>";
+	echo "<td>".$row[title]."</td>";
+	echo "<td>".$row[content]."</td>";
+	echo "<td>".$row[url]."</td>";
+	echo "<td>".$row[intervals]."</td>";
+	echo "<td>".$row[datetime]."</td>";
+	echo "<td>"."<input type='submit' value='delete'/>"."</td>";
+	echo "</tr>";
+}
+?>
+</body>
 </html>
 
 
