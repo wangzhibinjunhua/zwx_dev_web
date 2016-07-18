@@ -21,7 +21,7 @@
 		<br>
 		<br>
 		<br>
-		请输入url:<input style="width:640px;" type="text" name="url"  />
+		请输入url:<input style="width:640px;" type="text" name="url"  /> 格式为http://abcd.com
 		<br>
 		<br>
 		<br>
