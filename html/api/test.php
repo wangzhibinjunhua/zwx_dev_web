@@ -18,6 +18,18 @@
 		<input type="submit" value="发送"  ;/>
 	</form>
 <br>
+<br>
+<br>
+<h1> log </h1>
+<?php
+//echo file_get_contents("/home/work/wzb/project/release/log/workerman.log");
+$handle = fopen('/home/work/wzb/project/release/log/workerman.log', 'r');
+    while(!feof($handle)){
+        echo fgets($handle);?>
+        <br>
+<?php }
+    fclose($handle);
+?>
 </body>
 </html>
 
