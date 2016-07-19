@@ -50,7 +50,7 @@ if(!$db){
 	die();
 }
 mysql_query("SET NAMES UTF8");
-$sql=mysql_query("select * from push_novatech");
+$sql=mysql_query("select * from push_novatech order by id desc");
 echo "<table border=1>";
 echo "<tr><td>ID</td><td>通知</td><td>标题</td><td>内容</td><td>链接</td><td>间隔</td><td>时间</td></tr>";
 while($row=mysql_fetch_array($sql)){
