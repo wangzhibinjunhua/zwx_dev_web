@@ -22,13 +22,46 @@
 <br>
 <h1> log </h1>
 <?php
-//echo file_get_contents("/home/work/wzb/project/release/log/workerman.log");
-$handle = fopen('/home/work/wzb/project/release/log/workerman.log', 'r');
-    while(!feof($handle)){
-        echo fgets($handle);?>
-        <br>
-<?php }
-    fclose($handle);
+/**
+ * 取文件最后$n行
+ * @param string $filename 文件路径
+ * @param int $n 最后几行
+ * @return mixed false表示有错误，成功则返回字符串
+ */
+ function FileLastLines($filename,$n){
+    if(!$fp=fopen($filename,'r')){
+        echo "打开文件失败，请检查文件路径是否正确，路径和文件名不要包含中文";
+        return false;
+    }
+    $pos=-2;
+    $eof="";
+    $str="";
+    while($n>0){
+        while($eof!="\n"){
+            if(!fseek($fp,$pos,SEEK_END)){
+                $eof=fgetc($fp);
+                $pos--;
+            }else{
+                break;
+            }
+        }
+        $str.=fgets($fp);
+        $eof="";
+        $n--;
+    }
+    return $str;
+ }
+echo nl2br(FileLastLines('/home/work/wzb/project/release/log/workerman.log',40));
+
+?>
+<?php
+//echo file_get_contents("/home/work/wzb/project/release/log/workerman.log",FALSE,NULL,1024,1024);
+//$handle = fopen('/home/work/wzb/project/release/log/workerman.log', 'r');
+  //  while(!feof($handle)){
+    //    echo fgets($handle);?>
+       <!-- <br> -->
+<?php //}
+  //  fclose($handle);
 ?>
 </body>
 </html>
