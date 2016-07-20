@@ -65,6 +65,7 @@ while($row=mysql_fetch_array($sql)){
 	echo "<td>"."<input type='submit' value='delete'/>"."</td>" ;
 	echo "</tr>";
 }
+echo "</table>";
 ?>
 </body>
 </html>
