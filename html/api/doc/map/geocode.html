@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>huayinghealthapiindex</title>
+<title>geocode</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
 /* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
@@ -468,24 +468,35 @@ vertical-align:1px;
 </style>
 </head>
 <body>
-<h1 id="huayinghealth-api">Huayinghealth API</h1>
-<h1 id="1-http-api-huayinghealth-com-doc-watchserver-html-">1.<a href="http://api.huayinghealth.com/doc/watchserver.html">手表通信协议</a></h1>
+<h1 id="-">逆地理编码</h1>
+<h2 id="1-">1.定位服务</h2>
 <ul>
-<li><a href="http://api.huayinghealth.com/doc/watchserver_jjl.html">加家乐儿童手表通信协议</a></li></ul>
+<li>接口功能介绍<br>根据上传经纬度坐标信息,定位服务返回位置信息</li><li>服务协议<br>HTTP/GET</li><li>URL<br>  <a href="http://lib.huayinghealth.com/lib-x/?service=geocode.regeo">http://lib.huayinghealth.com/lib-x/?service=geocode.regeo</a></li><li>编码格式<br>如无特殊声明,所有接口的输入参数和输出数据编码全部统一为utf-8</li></ul>
+<h2 id="2-">2.接口参数说明</h2>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>含义</th>
+<th>规则说明</th>
+<th>是否必须</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>location</td>
+<td>经纬度坐标</td>
+<td>规则： 最多支持20个坐标点。多个点之间用竖线分割。经度在前，纬度在后，经纬度间以,分割，经纬度小数点后不得超过6位</td>
+<td>必填</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-">3.实例说明</h2>
 <ul>
-<li><a href="http://api.huayinghealth.com/test.php">手表协议接口测试</a></li></ul>
-<h1 id="2-android-">2.android 推送服务</h1>
+<li><a href="http://lib.huayinghealth.com/lib-x/?service=geocode.regeo&amp;location=113.976019,22.559275">http://lib.huayinghealth.com/lib-x/?service=geocode.regeo&amp;location=113.976019,22.559275</a></li><li>返回 <code>{&quot;ret&quot;:200,&quot;data&quot;:{&quot;status&quot;:&quot;1&quot;,&quot;info&quot;:&quot;OK&quot;,&quot;infocode&quot;:&quot;10000&quot;,&quot;regeocode&quot;:{&quot;formatted_address&quot;:&quot;广东省深圳市南山区桃源街道龙井村&quot;,&quot;addressComponent&quot;:{&quot;country&quot;:&quot;中国&quot;,&quot;province&quot;:&quot;广东省&quot;,&quot;city&quot;:&quot;深圳市&quot;,&quot;citycode&quot;:&quot;0755&quot;,&quot;district&quot;:&quot;南山区&quot;,&quot;adcode&quot;:&quot;440305&quot;,&quot;township&quot;:&quot;桃源街道&quot;,&quot;towncode&quot;:&quot;440305008000&quot;,&quot;neighborhood&quot;:{&quot;name&quot;:&quot;龙井村&quot;,&quot;type&quot;:&quot;商务住宅;住宅区;住宅小区&quot;},&quot;building&quot;:{&quot;name&quot;:[],&quot;type&quot;:[]},&quot;streetNumber&quot;:{&quot;street&quot;:&quot;龙珠五路&quot;,&quot;number&quot;:&quot;36号&quot;,&quot;location&quot;:&quot;113.975907,22.5593664&quot;,&quot;direction&quot;:&quot;西北&quot;,&quot;distance&quot;:&quot;15.3436&quot;},&quot;businessAreas&quot;:[{&quot;location&quot;:&quot;113.98060652702694,22.55827501351351&quot;,&quot;name&quot;:&quot;桃源村&quot;,&quot;id&quot;:&quot;440305&quot;}]}}},&quot;msg&quot;:&quot;&quot;}</code></li></ul>
+<h2 id="4-">4.返回值说明</h2>
 <ul>
-<li><a href="http://api.huayinghealth.com/push/publish.php">novatech 推送服务</a></li></ul>
-<h1 id="3-gsm-">3.GSM版智能设备</h1>
-<ul>
-<li><a href="http://api.huayinghealth.com/doc/gsm/gsm_bpbg.html">GSM血压计&amp;血糖仪</a>     </li></ul>
-<h1 id="4-">4.地图定位服务</h1>
-<ul>
-<li><a href="http://api.huayinghealth.com/doc/map/lbs.html">基站wifi定位</a></li><li><a href="http://api.huayinghealth.com/doc/map/geocode.html">逆地理编码</a></li></ul>
-<h1 id="5-">5.天气服务</h1>
-<ul>
-<li><a href="http://api.huayinghealth.com/doc/weather/weather.html">获取全国天气</a></li></ul>
+<li>无查询结果返回null</li><li>正常返回<br><img src="http://api.huayinghealth.com/doc/map/geocode1.png" alt=""><br><img src="http://api.huayinghealth.com/doc/map/geocode2.png" alt=""><br><img src="http://api.huayinghealth.com/doc/map/geocode3.png" alt=""><br><img src="http://api.huayinghealth.com/doc/map/geocode4.png" alt=""><br><img src="http://api.huayinghealth.com/doc/map/geocode5.png" alt=""></li></ul>
 
 </body>
 </html>

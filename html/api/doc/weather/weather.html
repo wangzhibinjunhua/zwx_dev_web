@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>huayinghealthapiindex</title>
+<title>weather</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
 /* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
@@ -468,24 +468,35 @@ vertical-align:1px;
 </style>
 </head>
 <body>
-<h1 id="huayinghealth-api">Huayinghealth API</h1>
-<h1 id="1-http-api-huayinghealth-com-doc-watchserver-html-">1.<a href="http://api.huayinghealth.com/doc/watchserver.html">手表通信协议</a></h1>
+<h1 id="-">天气服务</h1>
+<h2 id="1-">1.定位服务</h2>
 <ul>
-<li><a href="http://api.huayinghealth.com/doc/watchserver_jjl.html">加家乐儿童手表通信协议</a></li></ul>
+<li>接口功能介绍<br>根据城市查询天气，未来5天、生活指数、PM2.5</li><li>服务协议<br>HTTP/GET</li><li>URL<br>  <a href="http://lib.huayinghealth.com/lib-x/?service=weather.get_weather_info">http://lib.huayinghealth.com/lib-x/?service=weather.get_weather_info</a></li><li>编码格式<br>如无特殊声明,所有接口的输入参数和输出数据编码全部统一为utf-8</li></ul>
+<h2 id="2-">2.接口参数说明</h2>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>含义</th>
+<th>规则说明</th>
+<th>是否必须</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cityname</td>
+<td>要查询的城市名称</td>
+<td>如：温州、上海、北京，需要utf8 urlencode</td>
+<td>必填</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-">3.实例说明</h2>
+<p><a href="http://lib.huayinghealth.com/lib-x/?service=weather.get_weather_info&amp;cityname=%E6%B5%B7%E5%8F%A3">http://lib.huayinghealth.com/lib-x/?service=weather.get_weather_info&amp;cityname=%E6%B5%B7%E5%8F%A3</a></p>
+<p>返回:{&quot;ret&quot;:200,&quot;data&quot;:{&quot;reason&quot;:&quot;successed!&quot;,&quot;result&quot;:{&quot;data&quot;:{&quot;realtime&quot;:{&quot;city_code&quot;:&quot;101310101&quot;,&quot;city_name&quot;:&quot;海口&quot;,&quot;date&quot;:&quot;2016-08-22&quot;,&quot;time&quot;:&quot;10<img src="https://assets-cdn.github.com/images/icons/emoji/00.png" alt=":00:" title=":00:" class="emoji" align="absmiddle" height="20" width="20">00&quot;,&quot;week&quot;:1,&quot;moon&quot;:&quot;七月二十&quot;,&quot;dataUptime&quot;:1471833427,&quot;weather&quot;:{&quot;temperature&quot;:&quot;29&quot;,&quot;humidity&quot;:&quot;76&quot;,&quot;info&quot;:&quot;多云&quot;,&quot;img&quot;:&quot;1&quot;},&quot;wind&quot;:{&quot;direct&quot;:&quot;东风&quot;,&quot;power&quot;:&quot;1级&quot;,&quot;offset&quot;:null,&quot;windspeed&quot;:null}},&quot;life&quot;:{&quot;date&quot;:&quot;2016-8-22&quot;,&quot;info&quot;:{&quot;chuanyi&quot;:[&quot;炎热&quot;,&quot;天气炎热，建议着短衫、短裙、短裤、薄型T恤衫等清凉夏季服装。&quot;],&quot;ganmao&quot;:[&quot;少发&quot;,&quot;各项气象条件适宜，发生感冒机率较低。但请避免长期处于空调房间中，以防感冒。&quot;],&quot;kongtiao&quot;:[&quot;部分时间开启&quot;,&quot;天气热，到中午的时候您将会感到有点热，因此建议在午后较热时开启制冷空调。&quot;],&quot;wuran&quot;:[&quot;良&quot;,&quot;气象条件有利于空气污染物稀释、扩散和清除，可在室外正常活动。&quot;],&quot;xiche&quot;:[&quot;不宜&quot;,&quot;不宜洗车，未来24小时内有雨，如果在此期间洗车，雨水和路上的泥水可能会再次弄脏您的爱车。&quot;],&quot;yundong&quot;:[&quot;较不宜&quot;,&quot;有降水，且风力较强，气压较低，推荐您在室内进行低强度运动；若坚持户外运动，须注意避雨防风。&quot;],&quot;ziwaixian&quot;:[&quot;中等&quot;,&quot;属中等强度紫外线辐射天气，外出时建议涂擦SPF高于15、PA+的防晒护肤品，戴帽子、太阳镜。&quot;]}},&quot;weather&quot;:[{&quot;date&quot;:&quot;2016-08-22&quot;,&quot;info&quot;:{&quot;day&quot;:[&quot;4&quot;,&quot;雷阵雨&quot;,&quot;32&quot;,&quot;东风&quot;,&quot;3-4 级&quot;,&quot;06:20&quot;],&quot;night&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;26&quot;,&quot;东风&quot;,&quot;3-4 级&quot;,&quot;19:02&quot;]},&quot;week&quot;:&quot;一&quot;,&quot;nongli&quot;:&quot;七月二十&quot;},{&quot;date&quot;:&quot;2016-08-23&quot;,&quot;info&quot;:{&quot;dawn&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;26&quot;,&quot;东风&quot;,&quot;3-4 级&quot;,&quot;19:02&quot;],&quot;day&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;32&quot;,&quot;东风&quot;,&quot;3-4 级&quot;,&quot;06:20&quot;],&quot;night&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;26&quot;,&quot;东风&quot;,&quot;3-4 级&quot;,&quot;19:01&quot;]},&quot;week&quot;:&quot;二&quot;,&quot;nongli&quot;:&quot;七月廿一&quot;},{&quot;date&quot;:&quot;2016-08-24&quot;,&quot;info&quot;:{&quot;dawn&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;26&quot;,&quot;东风&quot;,&quot;3-4 级&quot;,&quot;19:01&quot;],&quot;day&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;33&quot;,&quot;东北风&quot;,&quot;3-4 级&quot;,&quot;06:21&quot;],&quot;night&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;26&quot;,&quot;东北风&quot;,&quot;3-4 级&quot;,&quot;19:00&quot;]},&quot;week&quot;:&quot;三&quot;,&quot;nongli&quot;:&quot;七月廿二&quot;},{&quot;date&quot;:&quot;2016-08-25&quot;,&quot;info&quot;:{&quot;dawn&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;26&quot;,&quot;东北风&quot;,&quot;3-4 级&quot;,&quot;19:00&quot;],&quot;day&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;33&quot;,&quot;西北风&quot;,&quot;3-4 级&quot;,&quot;06:21&quot;],&quot;night&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;26&quot;,&quot;西风&quot;,&quot;3-4 级&quot;,&quot;18:59&quot;]},&quot;week&quot;:&quot;四&quot;,&quot;nongli&quot;:&quot;七月廿三&quot;},{&quot;date&quot;:&quot;2016-08-26&quot;,&quot;info&quot;:{&quot;dawn&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;26&quot;,&quot;西风&quot;,&quot;3-4 级&quot;,&quot;18:59&quot;],&quot;day&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;33&quot;,&quot;西风&quot;,&quot;3-4 级&quot;,&quot;06:21&quot;],&quot;night&quot;:[&quot;1&quot;,&quot;多云&quot;,&quot;26&quot;,&quot;西北风&quot;,&quot;3-4 级&quot;,&quot;18:59&quot;]},&quot;week&quot;:&quot;五&quot;,&quot;nongli&quot;:&quot;七月廿四&quot;}],&quot;pm25&quot;:{&quot;key&quot;:&quot;Haikou&quot;,&quot;show_desc&quot;:0,&quot;pm25&quot;:{&quot;curPm&quot;:&quot;18&quot;,&quot;pm25&quot;:&quot;6&quot;,&quot;pm10&quot;:&quot;10&quot;,&quot;level&quot;:1,&quot;quality&quot;:&quot;优&quot;,&quot;des&quot;:&quot;可正常活动。&quot;},&quot;dateTime&quot;:&quot;2016年08月22日10时&quot;,&quot;cityName&quot;:&quot;海口&quot;},&quot;jingqu&quot;:&quot;&quot;,&quot;date&quot;:&quot;&quot;,&quot;isForeign&quot;:&quot;0&quot;}},&quot;error_code&quot;:0},&quot;msg&quot;:&quot;&quot;}</p>
+<h2 id="4-">4.返回值说明</h2>
 <ul>
-<li><a href="http://api.huayinghealth.com/test.php">手表协议接口测试</a></li></ul>
-<h1 id="2-android-">2.android 推送服务</h1>
-<ul>
-<li><a href="http://api.huayinghealth.com/push/publish.php">novatech 推送服务</a></li></ul>
-<h1 id="3-gsm-">3.GSM版智能设备</h1>
-<ul>
-<li><a href="http://api.huayinghealth.com/doc/gsm/gsm_bpbg.html">GSM血压计&amp;血糖仪</a>     </li></ul>
-<h1 id="4-">4.地图定位服务</h1>
-<ul>
-<li><a href="http://api.huayinghealth.com/doc/map/lbs.html">基站wifi定位</a></li><li><a href="http://api.huayinghealth.com/doc/map/geocode.html">逆地理编码</a></li></ul>
-<h1 id="5-">5.天气服务</h1>
-<ul>
-<li><a href="http://api.huayinghealth.com/doc/weather/weather.html">获取全国天气</a></li></ul>
+<li>realtime 当前天气信息</li><li>life 生活指数</li><li>weather 未来天气预报</li><li>pm25 PM2.5</li></ul>
 
 </body>
 </html>
