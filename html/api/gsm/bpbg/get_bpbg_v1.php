@@ -54,12 +54,12 @@ if(!$db){
 if($devicetype == '1'){
 	//$sql=mysql_query("select * from gsm_bp");
 	if($user == '2'){
-		$sql=mysql_query("select * from gsm_bp where sn=$sn and datetime>'$time' order by id desc limit 0 ,$count");
+		$sql=mysql_query("select * from gsm_bp where sn='$sn' and datetime>'$time' order by id desc limit 0 ,$count");
 	}else{
-		$sql=mysql_query("select * from gsm_bp where sn=$sn and user=$user and datetime>'$time' order by id desc limit 0 ,$count");
+		$sql=mysql_query("select * from gsm_bp where sn='$sn' and user=$user and datetime>'$time' order by id desc limit 0 ,$count");
 	}
 }else if($devicetype == '2'){
-	$sql=mysql_query("select * from gsm_bg where sn=$sn and datetime>'$time' order by id desc limit 0 ,$count");
+	$sql=mysql_query("select * from gsm_bg where sn='$sn' and datetime>'$time' order by id desc limit 0 ,$count");
 }
 while($row=mysql_fetch_assoc($sql))
 $output[]=$row;
