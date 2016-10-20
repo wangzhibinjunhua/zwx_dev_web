@@ -1107,7 +1107,7 @@ vertical-align:1px;
 <li>ret  200:解析正常;其他:异常或错误</li><li>data 解析结果</li><li>code 0:有新消息;1:无新消息;2:参数错误</li><li>message:新消息文件名称filename</li></ul>
 <h3 id="-">特别说明</h3>
 <ul>
-<li>语音文件位置:<code>http://core.huayinghealth.com/media/childwatch/filename</code></li><li>可直接下载,amr格式音频文件</li><li>关于离线消息,手表可发离线消息保存在服务器,app在连上网络时自行调用这个接口查询是否有新消息,有新消息就down下来</li><li>down一个文件filename后,需要调用接口</li><li><code>http://lib.huayinghealth.com/lib-x/?service=watch.ignore_message&amp;imei=123456789012345&amp;user_id=13112345678&amp;filename=123456789012345_1474527618.amr</code></li><li>参数同上,多一个filename参数即为down下来的音频文件名称.</li><li>返回值{&quot;ret&quot;:200,&quot;data&quot;:{&quot;code&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;info&quot;:&quot;&quot;},&quot;msg&quot;:&quot;&quot;}</li><li>ret 200:解析正常</li><li>code 0:处理正常</li></ul>
+<li>语音文件位置:<code>http://core.huayinghealth.com/media/childwatch/filename</code></li><li>可直接下载,amr格式音频文件,新增jpg格式图片文件</li><li>关于离线消息,手表可发离线消息保存在服务器,app在连上网络时自行调用这个接口查询是否有新消息,有新消息就down下来</li><li>down一个文件filename后,需要调用接口</li><li><code>http://lib.huayinghealth.com/lib-x/?service=watch.ignore_message&amp;imei=123456789012345&amp;user_id=13112345678&amp;filename=123456789012345_1474527618.amr</code></li><li>参数同上,多一个filename参数即为down下来的音频文件名称.</li><li>返回值{&quot;ret&quot;:200,&quot;data&quot;:{&quot;code&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;info&quot;:&quot;&quot;},&quot;msg&quot;:&quot;&quot;}</li><li>ret 200:解析正常</li><li>code 0:处理正常</li></ul>
 <h2 id="20-">20.绑定手表</h2>
 <h2 id="-service-watch-bind_watch-"><code>?service=watch.bind_watch</code></h2>
 <h3 id="20-1-">20.1 参数说明</h3>
@@ -1177,7 +1177,39 @@ vertical-align:1px;
 </code></pre><h3 id="21-3-">21.3 返回值说明</h3>
 <pre><code>{&quot;ret&quot;:200,&quot;data&quot;:{&quot;code&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;info&quot;:&quot;&quot;},&quot;msg&quot;:&quot;&quot;}
 </code></pre><ul>
-<li>ret  200:解析正常;其他:异常或错误</li><li>data 解析结果</li><li>code 0:解绑成功;1:错误或者本身没有绑定;2:参数错误</li></ul>
+<li>ret  200:解析正常;其他:异常或错误</li><li>data 解析结果</li><li>code 0:解绑成功;1:错误或者本身没有绑定;2:参数错误   </li></ul>
+<h2 id="22-">22.远程拍照</h2>
+<h2 id="-service-watch-remote_photo-"><code>?service=watch.remote_photo</code></h2>
+<h3 id="22-1-">22.1 参数说明</h3>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>说明</th>
+<th>是否必须</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>imei</td>
+<td>手表imei</td>
+<td>是</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>接口签名</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-2-">22.2 实例说明</h3>
+<p><a href="http://lib.huayinghealth.com/lib-x/?service=watch.remote_photo&amp;imei=123456789012345">http://lib.huayinghealth.com/lib-x/?service=watch.remote_photo&amp;imei=123456789012345</a></p>
+<ul>
+<li>控制手表拍照并发送到服务器</li></ul>
+<h3 id="22-3-">22.3 返回值说明</h3>
+<pre><code>{&quot;ret&quot;:200,&quot;data&quot;:{&quot;code&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;info&quot;:&quot;&quot;},&quot;msg&quot;:&quot;&quot;}
+</code></pre><ul>
+<li>ret  200:解析正常;其他:异常或错误</li><li>data 解析结果</li><li>code 0:设置成功;1:设备离线状态;2:参数错误</li></ul>
 
 </body>
 </html>
