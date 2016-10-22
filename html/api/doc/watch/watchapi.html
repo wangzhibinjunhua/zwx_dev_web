@@ -471,8 +471,8 @@ vertical-align:1px;
 <h1 id="-api-">手表api服务</h1>
 <ul>
 <li>接口功能介绍<br>儿童手表rest api</li><li>服务协议<br>HTTP/GET</li><li>URL<br>  <a href="http://lib.huayinghealth.com/lib-x/?service=watch">http://lib.huayinghealth.com/lib-x/?service=watch</a>.</li><li><p>编码格式<br>如无特殊声明,所有接口的输入参数和输出数据编码全部统一为utf-8</p>
-</li><li><p>所有接口都带有sign参数,生成规则是所有参数按字典排序md5加密,32位小写字符串.</p>
-</li><li>service=xx.oo参数包含在内,sign参数不包含</li></ul>
+</li><li><p>所有接口都带有sign参数,生成规则是所有参数名称按字典排序md5加密,32位小写字符串.</p>
+</li><li>service=xx.oo参数包含在内,sign参数不包含</li><li>举例: 参数service=xxx&amp;upmode=10&amp;imei=13123123 参数名称升序排序 imei &lt;service&lt; upmode.   拼接内容为字符串str=13123123xxx10. 然后计算str的md5,32位小写  </li></ul>
 <h2 id="1-">1.获取最新的一次定位信息</h2>
 <h2 id="-service-watch-get_lastest_location-"><code>?service=watch.get_lastest_location</code></h2>
 <h3 id="1-1-">1.1 参数说明</h3>
