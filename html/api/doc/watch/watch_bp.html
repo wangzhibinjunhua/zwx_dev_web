@@ -268,22 +268,25 @@ style='font-size:24.0pt;font-family:宋体'>手表通信协议</span></b></p>
  <tr>
   <td width=142 valign=top style='width:106.5pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoToc1><span lang=EN-US>&nbsp;</span></p>
+  <p class=MsoToc1><span lang=EN-US>V2.0</span></p>
   </td>
   <td width=142 valign=top style='width:106.5pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoToc1><span lang=EN-US>&nbsp;</span></p>
+  <p class=MsoToc1><span lang=EN-US>2016.10.31</span></p>
   </td>
   <td width=142 valign=top style='width:106.55pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoToc1><span lang=EN-US>&nbsp;</span></p>
+  <p class=MsoToc1><span style='font-family:宋体'>对定位数据</span><span lang=EN-US>,</span><span
+  style='font-family:宋体'>天气数据详细作了说明</span><span lang=EN-US>,</span><span
+  style='font-family:宋体'>对中文</span><span lang=EN-US>unicode</span><span
+  style='font-family:宋体'>编码详细作了说明</span></p>
   </td>
   <td width=142 valign=top style='width:106.55pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoToc1><span lang=EN-US>&nbsp;</span></p>
+  <p class=MsoToc1><span style='font-family:宋体'>王志斌</span></p>
   </td>
  </tr>
  <tr>
@@ -401,254 +404,218 @@ clear=all style='page-break-before:always'>
 
 <p class=MsoNormal></p>
 
-<p class=MsoToc1><span style='font-family:宋体'>一．说明</span><span lang=EN-US>......................................................................................................................... </span><span lang=EN-US>4</span></p>
+<p class=MsoToc1><span style='font-family:宋体'>一．说明</span><span lang=EN-US>......................................................................................................................... </span><span lang=EN-US>3</span></p>
 
-<p class=MsoToc1><span style='font-family:宋体'>二．终端发送指令</span><span lang=EN-US>.......................................................................................................... </span><span lang=EN-US>4</span></p>
+<p class=MsoToc1><span style='font-family:宋体'>二．终端发送指令</span><span lang=EN-US>.......................................................................................................... </span><span lang=EN-US>3</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>1.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>链路保持</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>4</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>3</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>2.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>位置数据上报</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>4</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>3</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>3.</span><span style='font-family:宋体;font-variant:
-normal !important;text-transform:uppercase'>盲点补传数据</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>4</span></p>
-
-<p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
-text-transform:uppercase'>4.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>获取天气</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>5</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>3</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>5</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>报警数据上报</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>5</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>4</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>6.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>获取系统时间</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>5</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>4</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>7</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>心率数据上报</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>6</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>5</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>8</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>血压数据上报</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>6</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>5</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>9</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>心电数据上报</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>6</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>5</span></p>
 
 <p class=MsoToc1><span style='font-family:宋体'>三</span><span lang=EN-US>.</span><span
-style='font-family:宋体'>平台发送指令</span><span lang=EN-US>............................................................................................................. </span><span lang=EN-US>7</span></p>
+style='font-family:宋体'>平台发送指令</span><span lang=EN-US>............................................................................................................. </span><span lang=EN-US>5</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>1.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>数据上传间隔设置</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>.................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>7</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>6</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>2.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>拨打电话</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>7</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>6</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>3.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>发送短信</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>7</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>6</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>4.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>监听</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>.......................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>8</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>7</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>5.SOS</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>号码设置</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>8</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>7</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>6.IP</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>端口设置</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>8</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>7</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>7.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>恢复出厂设置</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>8</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>7</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>8.APN</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>设置</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>9</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>8</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>9.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>版本查询</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>9</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>8</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>10.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>重启</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>9</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>8</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>10.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>定位指令</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>10</span></p>
+style='font-variant:normal !important;text-transform:uppercase'>................................................................................................................. </span><span
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>8</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>11.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>关机指令</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>10</span></p>
-
-<p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
-text-transform:uppercase'>12.</span><span style='font-family:宋体;font-variant:
-normal !important;text-transform:uppercase'>取下手表报警开关</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>10</span></p>
+style='font-variant:normal !important;text-transform:uppercase'>................................................................................................................. </span><span
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>9</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>13.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>找手表指令</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>10</span></p>
+style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................. </span><span
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>9</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>14.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>闹钟设置指令</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>11</span></p>
+style='font-variant:normal !important;text-transform:uppercase'>......................................................................................................... </span><span
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>9</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>15.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>电话本设置指令</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>.................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>11</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>10</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>16.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>语音功能</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>12</span></p>
-
-<p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
-text-transform:uppercase'>17.</span><span style='font-family:宋体;font-variant:
-normal !important;text-transform:uppercase'>拍照</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>....................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>12</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>10</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>18.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>免打扰时间段设置</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>12</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>11</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>19.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>音量调节</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>13</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>11</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>20.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>屏幕亮度调节</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>13</span></p>
-
-<p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
-text-transform:uppercase'>21.</span><span style='font-family:宋体;font-variant:
-normal !important;text-transform:uppercase'>音频播放</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>13</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>11</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>22.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>查询话费流量</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>14</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>12</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>23.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>计步功能开关</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>14</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>12</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>24.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>查看手表是否在线</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>14</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>12</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>25.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>发送文本消息</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>........................................................................................................ </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>14</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>12</span></p>
 
-<p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
-text-transform:uppercase'>26.</span><span style='font-family:宋体;font-variant:
-normal !important;text-transform:uppercase'>测量血压</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>15</span></p>
-
-<p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
-text-transform:uppercase'>27.</span><span style='font-family:宋体;font-variant:
-normal !important;text-transform:uppercase'>测量心电</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>15</span></p>
-
-<p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
-text-transform:uppercase'>28.</span><span style='font-family:宋体;font-variant:
-normal !important;text-transform:uppercase'>测量心率</span><span lang=EN-US
-style='font-variant:normal !important;text-transform:uppercase'>............................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>15</span></p>
-
-<p class=MsoToc1><span style='font-family:宋体'>四．附录</span><span lang=EN-US>....................................................................................................................... </span><span lang=EN-US>16</span></p>
+<p class=MsoToc1><span style='font-family:宋体'>四．附录</span><span lang=EN-US>....................................................................................................................... </span><span lang=EN-US>13</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>1.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>附录一</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>..................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>16</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>13</span></p>
 
 <p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
 text-transform:uppercase'>2.</span><span style='font-family:宋体;font-variant:
 normal !important;text-transform:uppercase'>附录二</span><span lang=EN-US
 style='font-variant:normal !important;text-transform:uppercase'>..................................................................................................................... </span><span
-lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>17</span></p>
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>14</span></p>
+
+<p class=MsoToc2><span lang=EN-US style='font-variant:normal !important;
+text-transform:uppercase'>3.</span><span style='font-family:宋体;font-variant:
+normal !important;text-transform:uppercase'>附录三</span><span lang=EN-US
+style='font-variant:normal !important;text-transform:uppercase'>..................................................................................................................... </span><span
+lang=EN-US style='font-variant:normal !important;text-transform:uppercase'>16</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
@@ -657,7 +624,7 @@ clear=all style='page-break-before:always'>
 </span></b>
 
 <h1><a name="_Toc454198213"></a><a name="_Toc454197940"></a><a
-name="_Toc462409294"><span style='font-family:宋体'>一．说明</span></a></h1>
+name="_Toc465674749"><span style='font-family:宋体'>一．说明</span></a></h1>
 
 <p class=MsoNormal><span style='font-family:宋体'>该协议中所有数据都按照</span><span
 lang=EN-US>“LENGTH</span><span style='font-family:宋体'>厂商</span><span
@@ -676,13 +643,13 @@ style='font-family:宋体'>例如</span><span lang=EN-US>FFFF</span><span
 style='font-family:宋体'>表示长度为</span><span lang=EN-US>65535.</span><span
 style='font-family:宋体'>“内容”根据指令的不同格式不一样。</span></p>
 
-<h1><a name="_Toc462409295"></a><a name="_Toc454198214"></a><a
+<h1><a name="_Toc465674750"></a><a name="_Toc454198214"></a><a
 name="_Toc454197941"></a><a name="_Toc434055281"></a><a name="_Toc7899"></a><a
 name="_Toc22426"></a><a name="_Toc21974"></a><a name="_Toc408476212"><span
 style='font-family:宋体'>二．</span></a><span style='font-family:宋体'>终端发送指令</span><span
 lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h1>
 
-<h2><a name="_Toc462409296"></a><a name="_Toc454198215"></a><a
+<h2><a name="_Toc465674751"></a><a name="_Toc454198215"></a><a
 name="_Toc454197942"><span lang=EN-US>1.</span></a><span style='font-family:
 宋体'>链路保持</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -712,7 +679,7 @@ style='font-family:宋体'>则</span><span lang=EN-US>5</span><span style='font-fam
 宋体'>分钟重新连接一次</span><span lang=EN-US>.</span><span style='font-family:宋体'>这个链路保持时间可以根据贵司的实际经验进行修改，目的是保持手表和服务器的连接。</span><span
 lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409297"></a><a name="_Toc454198216"></a><a
+<h2><a name="_Toc465674752"></a><a name="_Toc454198216"></a><a
 name="_Toc454197943"><span lang=EN-US>2.</span></a><span style='font-family:
 宋体'>位置数据上报</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -741,30 +708,10 @@ style='font-family:宋体'>终端按照设定间隔上报位置和状态信息</span><span lang=EN-
 style='font-family:宋体'>不需要平台回复</span><span lang=EN-US>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<h2><a name="_Toc462409298"></a><a name="_Toc454198217"></a><a
-name="_Toc454197944"><span lang=EN-US>3.</span></a><span style='font-family:
-宋体'>盲点补传数据</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; &nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>终端发送</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*UD2 </span><span
-style='font-family:宋体'>位置数据</span><span lang=EN-US> (</span><span
-style='font-family:宋体'>同上</span><span lang=EN-US>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>平台回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>无</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>说明</span><span lang=EN-US>:</span><span
-style='font-family:宋体'>补传未登陆平台是产生的上报数据</span><span lang=EN-US>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<h2><a name="_Toc462409299"></a><a name="_Toc454198218"></a><a
-name="_Toc454197945"><span lang=EN-US>4.</span></a><span style='font-family:
+<h2><a name="_Toc465674753"></a><a name="_Toc454198218"></a><a
+name="_Toc454197945"><span lang=EN-US>3.</span></a><span style='font-family:
 宋体'>获取天气</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
 <p class=MsoNormal><span style='font-family:宋体'>终端发送</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -816,8 +763,7 @@ style='font-family:宋体'>终端向平台请求天气数据</span><span lang=EN-US>,</span><
 style='font-family:宋体'>平台回复当前天气数据</span><span lang=EN-US>&nbsp;&nbsp; </span></p>
 
 <p class=MsoNormal><span lang=EN-US>0</span><span style='font-family:宋体'>&#8212;</span>
-<span style='font-family:宋体'>晴</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
+<span style='font-family:宋体'>晴</span><span lang=EN-US>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>1</span><span style='font-family:宋体'>&#8212;</span>
 <span style='font-family:宋体'>多云</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -838,7 +784,10 @@ style='font-family:宋体'>包含雨夹雪类天气</span><span lang=EN-US>)&nbsp;&nbsp;&n
 <p class=MsoNormal><span lang=EN-US>5</span><span style='font-family:宋体'>&#8212;雪</span><span
 lang=EN-US>&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409300"><span lang=EN-US>5</span></a><span
+<p class=MsoNormal><span style='font-family:宋体;color:red'>注</span><span
+lang=EN-US style='color:red'>:</span><span style='font-family:宋体;color:red'>天气上报位置数据详细格式见附录三</span></p>
+
+<h2><a name="_Toc465674754"><span lang=EN-US>5</span></a><span
 style='font-family:宋体'>报警数据上报</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -862,7 +811,7 @@ style='font-family:宋体'>查看基础数据上报</span><span lang=EN-US>)&nbsp;&nbsp;&n
 <p class=MsoNormal><span style='font-family:宋体'>无</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<h2><a name="_Toc462409301"><span lang=EN-US>6.</span></a><span
+<h2><a name="_Toc465674755"><span lang=EN-US>6.</span></a><span
 style='font-family:宋体'>获取系统时间</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -902,7 +851,7 @@ style='font-family:宋体'>分</span><span lang=EN-US>0</span><span style='font-fam
 
 <p class=MsoNormal><span lang=EN-US>&nbsp; </span></p>
 
-<h2><a name="_Toc462409302"><span lang=EN-US>7</span></a><span
+<h2><a name="_Toc465674756"><span lang=EN-US>7</span></a><span
 style='font-family:宋体'>心率数据上报</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -916,14 +865,17 @@ style='font-family:宋体'>心率数据</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp
 <p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp; 0018HA*123456789012345*HR,72</span></p>
+
+<p class=MsoNormal><span lang=EN-US>(</span><span style='font-family:宋体'>心率为</span><span
+lang=EN-US>72)</span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>平台回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
 <p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*HR</span></p>
 
-<h2><a name="_Toc462409303"><span lang=EN-US>8</span></a><span
+<h2><a name="_Toc465674757"><span lang=EN-US>8</span></a><span
 style='font-family:宋体'>血压数据上报</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -937,7 +889,12 @@ style='font-family:宋体'>血压数据</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp
 <p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp; 001fHA*123456789012345*BP,120,80,70</span></p>
+
+<p class=MsoNormal><span lang=EN-US>(</span><span style='font-family:宋体'>高压</span><span
+lang=EN-US>120,</span><span style='font-family:宋体'>低压</span><span lang=EN-US>80,</span><span
+style='font-family:宋体'>心率</span><span lang=EN-US>70. </span><span
+style='font-family:宋体'>都已逗号隔开</span><span lang=EN-US>)</span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>平台回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -945,7 +902,7 @@ style='font-family:宋体'>血压数据</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp
 <p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*BP&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<h2><a name="_Toc462409304"><span lang=EN-US>9</span></a><span
+<h2><a name="_Toc465674758"><span lang=EN-US>9</span></a><span
 style='font-family:宋体'>心电数据上报</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -970,14 +927,14 @@ style='font-family:宋体'>心电数据</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc462409305"></a><a name="_Toc454198219"></a><a
+<h1><a name="_Toc465674759"></a><a name="_Toc454198219"></a><a
 name="_Toc454197946"><span style='font-family:宋体'>三</span><span lang=EN-US>.</span></a><span
 style='font-family:宋体'>平台发送指令</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h1>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409306"></a><a name="_Toc454198220"></a><a
+<h2><a name="_Toc465674760"></a><a name="_Toc454198220"></a><a
 name="_Toc454197947"><span lang=EN-US>1.</span></a><span style='font-family:
 宋体'>数据上传间隔设置</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1010,7 +967,7 @@ style='font-family:宋体'>设置终端定时上报的时间间隔</span><span lang=EN-US>.&nbs
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409307"></a><a name="_Toc454198224"></a><a
+<h2><a name="_Toc465674761"></a><a name="_Toc454198224"></a><a
 name="_Toc454197951"><span lang=EN-US>2.</span></a><span style='font-family:
 宋体'>拨打电话</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1039,7 +996,7 @@ style='font-family:宋体'>通过该指令拨打相应手机号</span><span lang=EN-US>.&nbsp;
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409308"></a><a name="_Toc454198225"></a><a
+<h2><a name="_Toc465674762"></a><a name="_Toc454198225"></a><a
 name="_Toc454197952"><span lang=EN-US>3.</span></a><span style='font-family:
 宋体'>发送短信</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1084,9 +1041,11 @@ color:red'>即为</span></p>
 
 <p class=MsoNormal><span lang=EN-US style='color:red'>0029HA*123456789012345*SMS,00000000000,00310032003300410042004359275bb6597d</span></p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>注</span><span lang=EN-US>:Unicode
+</span><span style='font-family:宋体'>不需要加</span><span lang=EN-US>feff</span><span
+style='font-family:宋体'>头</span></p>
 
-<h2><a name="_Toc462409309"></a><a name="_Toc454198226"></a><a
+<h2><a name="_Toc465674763"></a><a name="_Toc454198226"></a><a
 name="_Toc454197953"><span lang=EN-US>4.</span></a><span style='font-family:
 宋体'>监听</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1115,7 +1074,7 @@ style='font-family:宋体'>终端自动回拨下发号码</span><span lang=EN-US>.&nbsp;&nbs
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409310"></a><a name="_Toc454198227"></a><a
+<h2><a name="_Toc465674764"></a><a name="_Toc454198227"></a><a
 name="_Toc454197954"><span lang=EN-US>5.SOS</span></a><span style='font-family:
 宋体'>号码设置</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
@@ -1137,8 +1096,8 @@ style='font-family:宋体'>电话号码</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp
 <p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:003AHA*123456789012345*SOS,00000000000,00000000000,00000000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
 
 <p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*SOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -1156,7 +1115,7 @@ style='font-family:宋体'>发生警情时向该号码发送短信或拨打电话</span><span lang=E
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409311"></a><a name="_Toc454198228"></a><a
+<h2><a name="_Toc465674765"></a><a name="_Toc454198228"></a><a
 name="_Toc454197955"><span lang=EN-US>6.IP</span></a><span style='font-family:
 宋体'>端口设置</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1168,8 +1127,8 @@ style='font-family:宋体'>或域名</span><span lang=EN-US>,</span><span
 style='font-family:宋体'>端口</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:0027HA*123456789012345*IP,113.81.229.9,5900&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:0027HA*123456789012345*IP,113.81.229.9,5900&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -1186,7 +1145,7 @@ style='font-family:宋体'>和端口</span><span lang=EN-US>.&nbsp;&nbsp;&nbsp;&nbsp;
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409312"></a><a name="_Toc454198229"></a><a
+<h2><a name="_Toc465674766"></a><a name="_Toc454198229"></a><a
 name="_Toc454197956"><span lang=EN-US>7.</span></a><span style='font-family:
 宋体'>恢复出厂设置</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1205,8 +1164,8 @@ name="_Toc454197956"><span lang=EN-US>7.</span></a><span style='font-family:
 <p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*FACTORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>: 001AHA*123456789012345*FACTORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:
+001AHA*123456789012345*FACTORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>说明</span><span lang=EN-US>:</span><span
 style='font-family:宋体'>终端恢复出厂设置</span><span lang=EN-US>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1216,7 +1175,7 @@ style='font-family:宋体'>终端恢复出厂设置</span><span lang=EN-US>.&nbsp;&nbsp;&n
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409313"></a><a name="_Toc454198233"></a><a
+<h2><a name="_Toc465674767"></a><a name="_Toc454198233"></a><a
 name="_Toc454197960"><span lang=EN-US>8.APN</span></a><span style='font-family:
 宋体'>设置</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1236,8 +1195,8 @@ style='font-family:宋体'>用户数据</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp
 <p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*APN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*APN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:0014HA*123456789012345*APN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -1251,7 +1210,7 @@ style='font-family:宋体'>参数</span><span lang=EN-US>.&nbsp;&nbsp;&nbsp;&nbsp;&n
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 
-<h2><a name="_Toc462409314"></a><a name="_Toc454198236"></a><a
+<h2><a name="_Toc465674768"></a><a name="_Toc454198236"></a><a
 name="_Toc454197963"><span lang=EN-US>9.</span></a><span style='font-family:
 宋体'>版本查询</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1280,7 +1239,7 @@ style='font-family:宋体'>查询终端软件版本</span><span lang=EN-US>.&nbsp;&nbsp;&n
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409315"></a><a name="_Toc454198237"></a><a
+<h2><a name="_Toc465674769"></a><a name="_Toc454198237"></a><a
 name="_Toc454197964"><span lang=EN-US>10.</span></a><span style='font-family:
 宋体'>重启</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1290,8 +1249,8 @@ name="_Toc454197964"><span lang=EN-US>10.</span></a><span style='font-family:
 <p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*RESET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:0018HA*123456789012345*RESET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:0018HA*123456789012345*RESET&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -1308,7 +1267,7 @@ style='font-family:宋体'>终端重启</span><span lang=EN-US>.&nbsp;&nbsp;&nbsp;&nbs
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409316"></a><a name="_Toc454198238"></a><a
+<h2><a name="_Toc465674770"></a><a name="_Toc454198238"></a><a
 name="_Toc454197965"><span lang=EN-US>10.</span></a><span style='font-family:
 宋体'>定位指令</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1340,7 +1299,7 @@ style='font-family:宋体'>连续一段时间一直处于定位状态</span><span lang=EN-US>.&n
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409317"></a><a name="_Toc454198239"></a><a
+<h2><a name="_Toc465674771"></a><a name="_Toc454198239"></a><a
 name="_Toc454197966"><span lang=EN-US>11.</span></a><span style='font-family:
 宋体'>关机指令</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
 
@@ -1360,41 +1319,15 @@ name="_Toc454197966"><span lang=EN-US>11.</span></a><span style='font-family:
 </span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:
-001BHA*123456789012345*POWEROFF&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+001BHA*123456789012345*POWEROFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>说明</span><span lang=EN-US>:</span><span
 style='font-family:宋体'>关机功能</span><span lang=EN-US>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 
-<h2><a name="_Toc462409318"></a><a name="_Toc454198240"></a><a
-name="_Toc454197967"><span lang=EN-US>12.</span></a><span style='font-family:
-宋体'>取下手表报警开关</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h2>
-
-<p class=MsoNormal><span style='font-family:宋体'>平台发送</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*REMOVE,0</span><span
-style='font-family:宋体'>或者</span><span lang=EN-US>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:001BHA*123456789012345*REMOVE,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*REMOVE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:
-0019HA*123456789012345*REMOVE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>说明</span><span lang=EN-US>:</span><span
-style='font-family:宋体'>拆除报警开关功能</span><span lang=EN-US>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-
-<h2><a name="_Toc462409319"></a><a name="_Toc454198241"><span lang=EN-US>13.</span></a><span
+<h2><a name="_Toc465674772"></a><a name="_Toc454198241"><span lang=EN-US>13.</span></a><span
 style='font-family:宋体'>找手表指令</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -1425,8 +1358,9 @@ style='font-family:宋体'>分钟</span><span lang=EN-US>.&nbsp;&nbsp;&nbsp;&nbsp;&n
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409320"></a><a name="_Toc454198242"><span lang=EN-US>14.</span></a><span
-style='font-family:宋体'>闹钟设置指令</span> <span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></h2>
+<h2><a name="_Toc465674773"></a><a name="_Toc454198242"><span lang=EN-US>14.</span></a><span
+style='font-family:宋体'>闹钟设置指令</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></h2>
 
 <p class=MsoNormal><span style='font-family:宋体'>平台发送</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -1470,10 +1404,10 @@ style='font-family:宋体'>自定义</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc454198243"></a><a name="_Toc462409321"><span lang=EN-US>15.</span></a><span
+<h2><a name="_Toc454198243"></a><a name="_Toc465674774"><span lang=EN-US>15.</span></a><span
 style='font-family:宋体'>电话本设置指令</span></h2>
 
-<p class=MsoNormal><span style='font-family:宋体'>电话簿里的号码默认是<span
+<p class=MsoNormal><span lang=EN-US>//</span><span style='font-family:宋体'>电话簿里的号码默认是<span
 style='color:red'>白名单</span>，电话簿以外号码无法给手表拨打电话、发送短信</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
@@ -1495,8 +1429,8 @@ style='font-family:宋体'>姓名</span><span lang=EN-US>5,</span><span
 style='font-family:宋体'>号码</span><span lang=EN-US>5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:002EHA*123456789012345*PHB,597D003100320033,313131&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:002EHA*123456789012345*PHB,
+feff72387238, 13500156266</span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -1525,8 +1459,8 @@ style='font-family:宋体'>姓名</span><span lang=EN-US>10,</span><span
 style='font-family:宋体'>号码</span><span lang=EN-US>10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:002EHA*123456789012345*PHB2,597D003100320033,313131&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:002EHA*123456789012345*PHB2,
+feff72387238, 13500156266</span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -1545,14 +1479,20 @@ style='font-family:宋体'>该指令设置终端电话本</span><span lang=EN-US>.&nbsp;&nbs
 style='color:red'>&nbsp;-- </span></span><span style='font-family:宋体;
 color:red'>姓名采用</span><span lang=EN-US style='color:red'>unicode</span><span
 style='font-family:宋体;color:red'>编码</span><span style='color:red'> </span><span
-style='font-family:宋体;color:red'>同协议第</span><span lang=EN-US style='color:red'>6</span><span
-style='font-family:宋体;color:red'>条</span><span lang=EN-US style='color:red'>,</span><span
-style='font-family:宋体;color:red'>协议第</span><span lang=EN-US style='color:red'>34</span><span
-style='font-family:宋体;color:red'>条</span></p>
+style='font-family:宋体;color:red'>前面固定加上</span><span lang=EN-US
+style='color:red'>feff</span><span style='font-family:宋体;color:red'>头</span><span
+lang=EN-US style='color:red'> 3872 </span><span style='font-family:宋体;
+color:red'>就是爸</span><span style='color:red'> </span><span style='font-family:
+宋体;color:red'>的</span><span lang=EN-US style='color:red'>unicode</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体;color:red'>注</span><span
+lang=EN-US style='color:red'>:Unicode</span><span style='font-family:宋体;
+color:red'>开头固定加</span><span lang=EN-US style='color:red'>feff</span><span
+style='font-family:宋体;color:red'>头</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc462409322"></a><a name="_Toc454198244"><span lang=EN-US>16.</span></a><span
+<h2><a name="_Toc465674775"></a><a name="_Toc454198244"><span lang=EN-US>16.</span></a><span
 style='font-family:宋体'>语音功能</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -1563,8 +1503,8 @@ style='font-family:宋体'>语音功能</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp
 style='font-family:宋体'>格式音频数据</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
 
 <p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*TK,</span><span
 style='font-family:宋体'>接收结果</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1598,59 +1538,9 @@ style='font-family:宋体'>&#8212;成功</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&n
 
 <p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc462409323"></a><a name="_Toc454198245"><span lang=EN-US>17.</span></a><span
-style='font-family:宋体'>拍照</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></h2>
-
-<p class=MsoNormal><span style='font-family:宋体'>平台发送</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*PHOTO&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>0018HA*123456789012345*PHOTO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>终端发送</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*PHOTO,</span><span
-style='font-family:宋体'>图片数据</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>0039HA*123456789012345*PHOTO,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>平台回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY* PHOTO,</span><span
-style='font-family:宋体'>接收结果</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:001AHA*123456789012345*PHOTO,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>接收结果</span><span lang=EN-US>:1</span><span
-style='font-family:宋体'>&#8212;成功</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-0--</span><span style='font-family:宋体'>失败</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-
-<h2><a name="_Toc462409324"></a><a name="_Toc454198246"><span lang=EN-US>18.</span></a><span
+<h2><a name="_Toc465674776"></a><a name="_Toc454198246"><span lang=EN-US>18.</span></a><span
 style='font-family:宋体'>免打扰时间段设置</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -1672,8 +1562,7 @@ style='font-family:宋体'>时间段</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*SILENCETIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -1687,7 +1576,7 @@ style='font-family:宋体'>设置免打扰时间段范围</span><span lang=EN-US>&nbsp;&nbsp
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409325"></a><a name="_Toc454198247"><span lang=EN-US>19.</span></a><span
+<h2><a name="_Toc465674777"></a><a name="_Toc454198247"><span lang=EN-US>19.</span></a><span
 style='font-family:宋体'>音量调节</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -1701,8 +1590,8 @@ style='font-family:宋体'>音量等级</span><span lang=EN-US>(0/1/2/3/4)&nbsp;&nbsp;
 <p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span lang=EN-US>0039HA*123456789012345*VOLUME,3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
+<p class=MsoNormal><span lang=EN-US>0039HA*123456789012345*VOLUME,3&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
@@ -1721,7 +1610,7 @@ style='font-family:宋体'>设置手表音量等级</span><span lang=EN-US>&nbsp;&nbsp;&nb
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409326"></a><a name="_Toc454198248"><span lang=EN-US>20.</span></a><span
+<h2><a name="_Toc465674778"></a><a name="_Toc454198248"><span lang=EN-US>20.</span></a><span
 style='font-family:宋体'>屏幕亮度调节</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -1755,46 +1644,7 @@ style='font-family:宋体'>设置手表屏幕亮度等级</span><span lang=EN-US>&nbsp;&nbsp
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409327"></a><a name="_Toc454198249"><span lang=EN-US>21.</span></a><span
-style='font-family:宋体'>音频播放</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></h2>
-
-<p class=MsoNormal><span style='font-family:宋体'>平台发送</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*MEDIA,</span><span
-style='font-family:宋体'>音频文件</span><span lang=EN-US>URL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>0039HA*123456789012345*MEDIA,url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*MEDIA,</span><span
-style='font-family:宋体'>下载结果</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:001AHA*123456789012345*MEDIA,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>说明</span><span lang=EN-US>: </span><span
-style='font-family:宋体'>平台发送音频文件</span><span lang=EN-US>url,</span><span
-style='font-family:宋体'>终端下载此音频文件并播放</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>下载结果</span><span lang=EN-US>:1</span><span
-style='font-family:宋体'>&#8212;成功</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-0</span><span style='font-family:宋体'>&#8212;</span> <span style='font-family:宋体'>失败</span><span
-lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-
-<h2><a name="_Toc462409328"></a><a name="_Toc454198250"><span lang=EN-US>22.</span></a><span
+<h2><a name="_Toc465674779"></a><a name="_Toc454198250"><span lang=EN-US>22.</span></a><span
 style='font-family:宋体'>查询话费流量</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -1825,7 +1675,7 @@ style='font-family:宋体'>运营商回复的短信内容</span><span lang=EN-US>&nbsp;&nbsp
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
-<h2><a name="_Toc462409329"></a><a name="_Toc454198251"><span lang=EN-US>23.</span></a><span
+<h2><a name="_Toc465674780"></a><a name="_Toc454198251"><span lang=EN-US>23.</span></a><span
 style='font-family:宋体'>计步功能开关</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -1863,7 +1713,7 @@ style='font-family:宋体'>&#8212;打开</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&n
 <span style='font-family:宋体'>关闭</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<h2><a name="_Toc462409330"></a><a name="_Toc454198252"><span lang=EN-US>24.</span></a><span
+<h2><a name="_Toc465674781"></a><a name="_Toc454198252"><span lang=EN-US>24.</span></a><span
 style='font-family:宋体'>查看手表是否在线</span><span lang=EN-US>&nbsp;&nbsp; </span></h2>
 
 <p class=MsoNormal><span style='font-family:宋体'>平台发送：</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1887,7 +1737,7 @@ style='font-family:宋体'>查看手表是否在线</span><span lang=EN-US>&nbsp;&nbsp; </
 <p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:0017HA*123456789012345*PING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<h2><a name="_Toc462409331"></a><a name="_Toc454198253"><span lang=EN-US>25.</span></a><span
+<h2><a name="_Toc465674782"></a><a name="_Toc454198253"><span lang=EN-US>25.</span></a><span
 style='font-family:宋体'>发送文本消息</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></h2>
 
@@ -1901,7 +1751,8 @@ style='font-family:宋体'>文本消息内容</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&
 <p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
-<p class=MsoNormal><span lang=EN-US>0021HA*123456789012345*MESSAGE,hello &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>0021HA*123456789012345*MESSAGE,hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
@@ -1932,84 +1783,15 @@ style='font-family:宋体'>码为</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc462409332"><span lang=EN-US>26.</span></a><span
-style='font-family:宋体'>测量血压</span><span lang=EN-US>&nbsp;&nbsp; </span></h2>
+<p class=MsoNormal><span style='font-family:宋体;color:red'>注</span><span
+lang=EN-US style='color:red'>:Unicode</span><span style='font-family:宋体;
+color:red'>开头没加</span><span lang=EN-US style='color:red'>feff</span><span
+style='font-family:宋体;color:red'>头</span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>平台发送：</span><span lang=EN-US>&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*BPT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>0016HA*123456789012345* BPT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*BPT</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:0016HA*123456789012345*BPT</span></p>
-
-<h2><a name="_Toc462409333"><span lang=EN-US>27.</span></a><span
-style='font-family:宋体'>测量心电</span><span lang=EN-US>&nbsp;&nbsp; </span></h2>
-
-<p class=MsoNormal><span style='font-family:宋体'>平台发送：</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*ECGT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>0016HA*123456789012345* ECGT&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY* ECGT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:0016HA*123456789012345*
-ECGT&nbsp;&nbsp;&nbsp; </span></p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
-
-<h2><a name="_Toc462409334"><span lang=EN-US>28.</span></a><span
-style='font-family:宋体'>测量心率</span><span lang=EN-US>&nbsp;&nbsp; </span></h2>
-
-<p class=MsoNormal><span style='font-family:宋体'>平台发送：</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY*HRT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>0016HA*123456789012345* HRT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>终端回复</span><span lang=EN-US>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span lang=EN-US>LENGTHHA*YYYYYYYYYY* HRT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></p>
-
-<p class=MsoNormal><span style='font-family:宋体'>实例</span><span lang=EN-US>:0016HA*123456789012345*
-HRT&nbsp;&nbsp;&nbsp; </span></p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
-
-<h1><a name="_Toc462409335"><span style='font-family:宋体'>四．附录</span></a><span
+<h1><a name="_Toc465674783"><span style='font-family:宋体'>四．附录</span></a><span
 lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h1>
 
-<h2><a name="_Toc462409336"><span lang=EN-US>1.</span></a><span
+<h2><a name="_Toc465674784"><span lang=EN-US>1.</span></a><span
 style='font-family:宋体'>附录一</span></h2>
 
 <div align=center>
@@ -2337,6 +2119,16 @@ style='font-family:宋体'>附录一</span></h2>
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
   style='font-family:宋体'>00000000</span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:宋体'>(</span><span style='font-family:宋体'>解释<span
+  lang=EN-US>:</span>此为<span lang=EN-US>16</span>进制数<span lang=EN-US>.</span></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体'>有<span lang=EN-US>32</span>个<span lang=EN-US>bit.</span>每个<span
+  lang=EN-US>bit</span>代表不同状态</span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体'>比如<span lang=EN-US>16</span>进制数<span lang=EN-US>ffffffff </span></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体'>换算二进制就是<span lang=EN-US>32</span>个<span lang=EN-US>1)</span></span></p>
   </td>
   <td width=335 valign=top style='width:251.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -2351,9 +2143,8 @@ style='font-family:宋体'>附录一</span></h2>
   lang=EN-US>(0</span>开始<span lang=EN-US>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </span>含义<span lang=EN-US>(1</span>有效<span lang=EN-US>)</span></span></p>
   <p class=MsoNormal align=left style='text-align:left;text-indent:5.25pt'><span
-  lang=EN-US style='font-family:宋体'>0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
-  style='font-family:宋体'>低电状态</span></p>
+  lang=EN-US style='font-family:宋体'>0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><span style='font-family:宋体'>低电状态</span></p>
   <p class=MsoNormal align=left style='text-align:left;text-indent:5.25pt'><span
   lang=EN-US style='font-family:宋体'>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </span><span style='font-family:宋体'>出围栏状态</span></p>
@@ -2870,7 +2661,7 @@ style='font-family:宋体'>附录一</span></h2>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc462409337"><span lang=EN-US>2.</span></a><span
+<h2><a name="_Toc465674785"><span lang=EN-US>2.</span></a><span
 style='font-family:宋体'>附录二</span><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span></h2>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
@@ -3433,6 +3224,439 @@ style='font-family:宋体'>附录二</span><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span
 </table>
 
 </div>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><a name="_Toc465674786"><span lang=EN-US>3.</span></a><span
+style='font-family:宋体'>附录三</span><span lang=EN-US>&nbsp;&nbsp; (</span><span
+style='font-family:宋体'>获取天气时需要上报的数据</span><span lang=EN-US>)</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=609
+ style='width:456.9pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>拆分示例</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>每个字段的说明</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>0039</span><span lang=EN-US>HA</span><span
+  lang=EN-US style='font-family:宋体;color:black'>*123456789012345*WEATHER,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>LENGTH</span><span style='font-family:
+  宋体;color:black'>厂商<span lang=EN-US>*YYYYYYYYYY* WEATHER</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>220414,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>日期<span lang=EN-US>(14</span>年<span
+  lang=EN-US>4</span>月<span lang=EN-US>22</span>日<span lang=EN-US>)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>134652,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>时间<span lang=EN-US>(13:46:52)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>A,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>是否定位<span lang=EN-US>(A:</span>定位<span
+  lang=EN-US> V:</span>未定位<span lang=EN-US>)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>22.571707,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>纬度<span lang=EN-US> (</span>南纬用负数表示<span
+  lang=EN-US>)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>113.8613968,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>经度<span lang=EN-US>(</span>西经用负数表示<span
+  lang=EN-US>)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>4,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>基站个数<span lang=EN-US>(4</span>个<span
+  lang=EN-US>)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>1,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>GSM</span><span style='font-family:宋体;
+  color:black'>时延<span lang=EN-US>(1)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>460,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>MCC</span><span style='font-family:宋体;
+  color:black'>国家码<span lang=EN-US>(460)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>02,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>MNC</span><span style='font-family:宋体;
+  color:black'>网号<span lang=EN-US>(02</span>代表中国移动<span lang=EN-US>)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>9360,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>连接基站位置区域码<span lang=EN-US>(9360)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>4082,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>连接基站编号<span lang=EN-US>(4082)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>131,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>连接基站信号强度<span lang=EN-US>(131)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>9360,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>附近基站<span lang=EN-US>1</span>位置区域码<span
+  lang=EN-US>(9360)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>4092,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>附近基站<span lang=EN-US>1</span>编号<span
+  lang=EN-US>(4092)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>148,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>附近基站<span lang=EN-US>1</span>信号强度<span
+  lang=EN-US>(148)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>9360,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>附近基站<span lang=EN-US>2</span>位置区域码<span
+  lang=EN-US>(9360)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>4091,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>附近基站<span lang=EN-US>2</span>编号<span
+  lang=EN-US>(4091)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>143,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>附近基站<span lang=EN-US>2</span>信号强度<span
+  lang=EN-US>(143)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>9360,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>附近基站<span lang=EN-US>3</span>位置区域码<span
+  lang=EN-US>(9360)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>4153,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>附近基站<span lang=EN-US>3</span>编号<span
+  lang=EN-US>(4153)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>141,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;color:black'>附近基站<span lang=EN-US>3</span>信号强度<span
+  lang=EN-US>(141)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>2,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>Wifi</span><span style='font-family:宋体;
+  color:black'>信息数量<span lang=EN-US>(2)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>TP-LINK1,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>Wifi 1</span><span style='font-family:
+  宋体;color:black'>名字<span lang=EN-US>(TP-LINK1)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>1c:fa:68:13:a5:b4,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>Wifi1 MAC</span><span style='font-family:
+  宋体;color:black'>地址<span lang=EN-US>(1c:fa:68:13:a5:b4)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>-61,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>Wifi 1 </span><span style='font-family:
+  宋体;color:black'>信号强度<span lang=EN-US>(-61)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>TP-LINK2,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>Wifi2</span><span style='font-family:宋体;
+  color:black'>名字<span lang=EN-US>(TP-LINK2)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>1c:fa:68:13:a5:b4,</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>Wifi2 MAC</span><span style='font-family:
+  宋体;color:black'>地址<span lang=EN-US>(1c:fa:68:13:a5:b4)</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=bottom style='width:239.35pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>-55</span></p>
+  </td>
+  <td width=290 valign=bottom style='width:217.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;color:black'>Wifi 1 </span><span style='font-family:
+  宋体;color:black'>信号强度<span lang=EN-US>(-55)</span></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
