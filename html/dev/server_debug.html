@@ -221,7 +221,7 @@ function md5(string){
     function onopen()
     {
         //alert('open');
-        ws.send('ping');
+        ws.send(name);
     }
 
 	 // 服务端发来消息时
@@ -229,7 +229,7 @@ function md5(string){
     {
         //alert(e.data);
 		if(e.data=='ping'){
-			 ws.send('ping');
+			 ws.send(name);
 		}else{
 			document.write(e.data);
 			document.write("<br>")
