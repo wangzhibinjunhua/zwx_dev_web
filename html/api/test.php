@@ -6,6 +6,10 @@
 </head>
 <body>
 <form action="test1.php"  method="post" >
+        请输入要手表连接的端口号:<input style="width:200px;" type="text" name="msg2" id="input2" />
+
+        <br>
+        <br>
 		请输入要发送的全部内容:<input style="width:1280px;" type="text" name="msg" id="input1" />
 		<br>
 		<br>
@@ -21,6 +25,9 @@
 <br>
 <br>
 <h1> log </h1>
+
+<ul>
+<li><a href="http://dev.huayinghealth.com/server_debug.html" target="_blank">查看服务器接收到的消息</a></li></ul>
 <?php
 /**
  * 取文件最后$n行
@@ -51,7 +58,7 @@
     }
     return $str;
  }
-echo nl2br(FileLastLines('/home/work/wzb/project/release/log/workerman.log',40));
+//echo nl2br(FileLastLines('/home/work/wzb/project/release/log/workerman.log',40));
 
 ?>
 <?php

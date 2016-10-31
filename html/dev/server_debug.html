@@ -1,7 +1,8 @@
 <html><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  
+
   <title>huayingtek </title>
+
   <script type="text/javascript">
 var ws,name;
 
@@ -30,7 +31,7 @@ function md5(string){
                         } else {
                                 return (lResult ^ lX8 ^ lY8);
                         }
-                }         
+                }
                 function md5_F(x,y,z){
                         return (x & y) | ((~x) & z);
                 }
@@ -46,7 +47,7 @@ function md5(string){
                 function md5_FF(a,b,c,d,x,s,ac){
                         a = md5_AddUnsigned(a, md5_AddUnsigned(md5_AddUnsigned(md5_F(b, c, d), x), ac));
                         return md5_AddUnsigned(md5_RotateLeft(a, s), b);
-                }; 
+                };
                 function md5_GG(a,b,c,d,x,s,ac){
                         a = md5_AddUnsigned(a, md5_AddUnsigned(md5_AddUnsigned(md5_G(b, c, d), x), ac));
                         return md5_AddUnsigned(md5_RotateLeft(a, s), b);
@@ -54,7 +55,7 @@ function md5(string){
                 function md5_HH(a,b,c,d,x,s,ac){
                         a = md5_AddUnsigned(a, md5_AddUnsigned(md5_AddUnsigned(md5_H(b, c, d), x), ac));
                         return md5_AddUnsigned(md5_RotateLeft(a, s), b);
-                }; 
+                };
                 function md5_II(a,b,c,d,x,s,ac){
                         a = md5_AddUnsigned(a, md5_AddUnsigned(md5_AddUnsigned(md5_I(b, c, d), x), ac));
                         return md5_AddUnsigned(md5_RotateLeft(a, s), b);
@@ -80,7 +81,7 @@ function md5(string){
                         lWordArray[lNumberOfWords-2] = lMessageLength<<3;
                         lWordArray[lNumberOfWords-1] = lMessageLength>>>29;
                         return lWordArray;
-                }; 
+                };
                 function md5_WordToHex(lValue){
                         var WordToHexValue="",WordToHexValue_temp="",lByte,lCount;
                         for(lCount = 0;lCount<=3;lCount++){
@@ -92,9 +93,9 @@ function md5(string){
                 };
                 function md5_Utf8Encode(string){
                         string = string.replace(/\r\n/g,"\n");
-                        var utftext = ""; 
+                        var utftext = "";
                         for (var n = 0; n < string.length; n++) {
-                                var c = string.charCodeAt(n); 
+                                var c = string.charCodeAt(n);
                                 if (c < 128) {
                                         utftext += String.fromCharCode(c);
                                 }else if((c > 127) && (c < 2048)) {
@@ -104,10 +105,10 @@ function md5(string){
                                         utftext += String.fromCharCode((c >> 12) | 224);
                                         utftext += String.fromCharCode(((c >> 6) & 63) | 128);
                                         utftext += String.fromCharCode((c & 63) | 128);
-                                } 
-                        } 
+                                }
+                        }
                         return utftext;
-                }; 
+                };
                 var x=Array();
                 var k,AA,BB,CC,DD,a,b,c,d;
                 var S11=7, S12=12, S13=17, S14=22;
@@ -115,8 +116,8 @@ function md5(string){
                 var S31=4, S32=11, S33=16, S34=23;
                 var S41=6, S42=10, S43=15, S44=21;
                 string = md5_Utf8Encode(string);
-                x = md5_ConvertToWordArray(string); 
-                a = 0x67452301; b = 0xEFCDAB89; c = 0x98BADCFE; d = 0x10325476; 
+                x = md5_ConvertToWordArray(string);
+                a = 0x67452301; b = 0xEFCDAB89; c = 0x98BADCFE; d = 0x10325476;
                 for (k=0;k<x.length;k+=16) {
                         AA=a; BB=b; CC=c; DD=d;
                         a=md5_FF(a,b,c,d,x[k+0], S11,0xD76AA478);
@@ -199,14 +200,14 @@ function md5(string){
     function connect() {
        // 创建websocket
 	   //document.write("连接成功");
-       ws = new WebSocket("ws://"+"120.76.47.120"+":10004");
-	   
+       ws = new WebSocket("ws://"+"120.76.47.120"+":9999");
+
 		//alert('connect');
-	
+
        // 当socket连接打开时，输入用户名
        ws.onopen = onopen;
        // 当有消息时根据消息类型显示不同信息
-       ws.onmessage = onmessage; 
+       ws.onmessage = onmessage;
        ws.onclose = function() {
     	  console.log("连接关闭，定时重连");
           connect();
@@ -215,14 +216,14 @@ function md5(string){
      	  console.log("出现错误");
        };
     }
-	
+
 	 // 连接建立时发送登录信息
     function onopen()
     {
-       // alert('open');
-       // ws.send('test');
+        //alert('open');
+        ws.send('ping');
     }
-	
+
 	 // 服务端发来消息时
     function onmessage(e)
     {
@@ -236,26 +237,28 @@ function md5(string){
 
     }
 
-  	
-	function show_prompt(){  
+
+	function show_prompt(){
         name = prompt('输入访问密码：', '');
 		var name_md5=md5(name);
-        if(name_md5 != '42130a69e097fd7496b8fe7b13d7018c'){  
+        if(name_md5 != '42130a69e097fd7496b8fe7b13d7018c'){
 			alert("密码错误");
         }else{
 			document.write("连接成功");
 			document.write("<br>")
 			connect();
 		}
-    }  
+    }
   	</script>
-  
+
   </head>
+
   <body onload="show_prompt();">
-  <!--<p id="demo">Welcome to Huayingtek .</p> -->
+
   </body>
-  
-   
-  
+
+
+
+
 </html>
-  
+
