@@ -1358,6 +1358,107 @@ vertical-align:1px;
 <pre><code>{&quot;ret&quot;:200,&quot;data&quot;:{&quot;code&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;info&quot;:&quot;&quot;},&quot;msg&quot;:&quot;&quot;}
 </code></pre><ul>
 <li>ret  200:解析正常;其他:异常或错误</li><li>data 解析结果</li><li>code 0:成功,返回用户信息(昵称,用户名,性别,等等);2:登录失败;3:登录失败;9:帐号被锁定</li></ul>
+<h2 id="27-">27.找回密码,获取短信验证码</h2>
+<h2 id="-service-hawatchaccount-get_forgetpw_code-"><code>?service=HaWatchAccount.get_forgetpw_code</code></h2>
+<h3 id="27-1-">27.1 参数说明</h3>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>说明</th>
+<th>是否必须</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mobile</td>
+<td>手机号</td>
+<td>是</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>接口签名</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="27-2-">27.2 实例说明</h3>
+<p><a href="http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.get_forgetpw_code&amp;mobile=13012345678">http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.get_forgetpw_code&amp;mobile=13012345678</a></p>
+<ul>
+<li>用于找回密码时,获取短信验证码</li></ul>
+<h3 id="27-3-">27.3 返回值说明</h3>
+<pre><code>{&quot;ret&quot;:200,&quot;data&quot;:{&quot;code&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;info&quot;:&quot;&quot;},&quot;msg&quot;:&quot;&quot;}
+</code></pre><ul>
+<li>ret  200:解析正常;其他:异常或错误</li><li>data 解析结果</li><li>code 0:成功,发送短信验证码;3:没有此用户;1:稍后再尝试</li></ul>
+<h2 id="28-">28.找回密码,验证短信验证码</h2>
+<h2 id="-service-hawatchaccount-verify_forgetpw_code-"><code>?service=HaWatchAccount.verify_forgetpw_code</code></h2>
+<h3 id="28-1-">28.1 参数说明</h3>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>说明</th>
+<th>是否必须</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mobile</td>
+<td>手机号</td>
+<td>是</td>
+</tr>
+<tr>
+<td>vcode</td>
+<td>短信验证码</td>
+<td>是</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>接口签名</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="28-2-">28.2 实例说明</h3>
+<p><a href="http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.verify_forgetpw_code&amp;mobile=13012345678&amp;vcode=839174">http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.verify_forgetpw_code&amp;mobile=13012345678&amp;vcode=839174</a></p>
+<ul>
+<li>用于找回密码时,验证短信验证码</li></ul>
+<h3 id="28-3-">28.3 返回值说明</h3>
+<pre><code>{&quot;ret&quot;:200,&quot;data&quot;:{&quot;code&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;info&quot;:&quot;&quot;},&quot;msg&quot;:&quot;&quot;}
+</code></pre><ul>
+<li>ret  200:解析正常;其他:异常或错误</li><li>data 解析结果</li><li>code 0:成功,返回授权码vkey,mobile 手机号;其他:失败</li></ul>
+<h2 id="29-">29.找回密码,重置密码</h2>
+<h2 id="-service-hawatchaccount-reset_forgetpw-"><code>?service=HaWatchAccount.reset_forgetpw</code></h2>
+<h3 id="29-1-">29.1 参数说明</h3>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>说明</th>
+<th>是否必须</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mobile</td>
+<td>手机号</td>
+<td>是</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>接口签名</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="29-2-">29.2 实例说明</h3>
+<p><a href="http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.reset_forgetpw&amp;mobile=13012345678&amp;vkey=a4d4a5d0ad4efc1a636106dddae31711&amp;password=1234567">http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.reset_forgetpw&amp;mobile=13012345678&amp;vkey=a4d4a5d0ad4efc1a636106dddae31711&amp;password=1234567</a></p>
+<ul>
+<li>用于找回密码时,重置密码为1234567</li></ul>
+<h3 id="29-3-">29.3 返回值说明</h3>
+<pre><code>{&quot;ret&quot;:200,&quot;data&quot;:{&quot;code&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;info&quot;:&quot;&quot;},&quot;msg&quot;:&quot;&quot;}
+</code></pre><ul>
+<li>ret  200:解析正常;其他:异常或错误</li><li>data 解析结果</li><li>code 0:成功;1:失败</li></ul>
 
 </body>
 </html>
