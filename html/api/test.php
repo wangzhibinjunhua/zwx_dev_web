@@ -27,13 +27,13 @@
 <h1> log </h1>
 
 <ul>
-<li><a href="http://dev.huayinghealth.com/server_debug.html" target="_blank">查看服务器10003端口接收到的消息</a></li></ul>
+<li><a href="http://192.168.16.101/dev/html/dev/server_debug.html" target="_blank">查看服务器10003端口接收到的消息</a></li></ul>
 
 <br>
 <br>
 <br>
 <ul>
-<li><a href="http://dev.huayinghealth.com/server_debug2.html" target="_blank">查看服务器8282端口接收到的消息</a></li></ul>
+<li><a href="http://192.168.16.101/dev/html/dev/server_debug2.html" target="_blank">查看服务器8282端口接收到的消息</a></li></ul>
 <?php
 /**
  * 取文件最后$n行
